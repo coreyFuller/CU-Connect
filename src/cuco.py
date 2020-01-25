@@ -76,12 +76,20 @@ classHobbies = {
     "Hockey" :
 }
 
+
 #holds the similarity ratio for the all students to
 #the one being matched
 
 #read in info from the JSON file and pass it to an array of objects
 #build objects by putting info in the constructors
 
+def calcDistances(StudentA, StudentB) {
+    for x in range(5):
+        StudentB.totalDistance += abs(classHobbies[StudentA.Hobbies[x]] - classHobbies[StudentB.Hobbies[x]])
+    
+    
+
+}
 #for all students in list
     # find the total distace for all 10 dimensions from user to each student
     # store average of distances total in student object
