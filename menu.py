@@ -20,9 +20,9 @@ class LoginScreen(GridLayout):
         self.username = TextInput(multiline=False)
         self.add_widget(self.username)
 
-        self.add_widget(Label(text='[font=Helvetica]'+'Email'+'[/font]', markup = True))
-        self.email = TextInput(multiline=False)
-        self.add_widget(self.email)
+        # self.add_widget(Label(text='[font=Helvetica]'+'Email'+'[/font]', markup = True))
+        # self.email = TextInput(multiline=False)
+        # self.add_widget(self.email)
 
         self.add_widget(Label(text='[font=Helvetica]'+"Password"+ '[/font]', markup = True))
         self.password = TextInput(password=True, multiline=False)
