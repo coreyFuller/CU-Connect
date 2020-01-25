@@ -9,6 +9,7 @@ class Student:
     unhash
     pwhash
     totalDistance = []
+    matchAverage = [] 
 
     # default constructor 
     def __init__(self, id, hobbies, classes, name, hasval1, hasval2): 
@@ -75,7 +76,6 @@ classHobbies = {
 
 #holds the similarity ratio for the all students to
 #the one being matched
-matchAverage = [] 
 
 #read in info from the JSON file and pass it to an array of objects
 #build objects by putting info in the constructors
