@@ -8,8 +8,10 @@ class Student:
     Name = []
     unhash
     pwhash
-    totalDistance = []
-    matchAverage = [] 
+    totalDistance
+    matchAverage 
+
+studentList = []
 
     # default constructor 
     def __init__(self, id, hobbies, classes, name, hasval1, hasval2): 
@@ -43,35 +45,35 @@ classDict = {
 
 # maps hobbies to a distance
 classHobbies = {
-    "Coding" :
-    "Virtual Reality" :
-    "Video games" :
-    "Robotics" :
-    "Movies" : 
-    "Music/Music Production" :
-    "Photography" :
-    "Archery" :
-    "Basketball" :
-    "Baseball" :
-    "Track" :
-    "Cross-Country" :
-    "Volleyball" :
-    "Lacrosse" :
-    "Soccer" :
-    "Softball" :
-    "Swimming" :
-    "Football" :
-    "Rowing" :
-    "Field Hockey" :
-    "Bowling" :
-    "Golf" :
-    "Frisbee" :
-    "Ping Pong" :
-    "Cheerleading" :
-    "Fencing" :
-    "Esports" :
-    "Skateboarding" :
-    "Hockey" :
+    "Coding" : 0
+    "Virtual Reality" : 2
+    "Video games" : 4
+    "Robotics" : 8
+    "Movies" :  14
+    "Music/Music Production" : 16
+    "Photography" : 25
+    "Archery" : 100
+    "Basketball" : 150
+    "Baseball" : 200
+    "Track" : 250
+    "Cross-Country" : 260
+    "Volleyball" : 300
+    "Lacrosse" : 350
+    "Soccer" : 370
+    "Softball" : 220
+    "Swimming" : 1500
+    "Football" : 600
+    "Rowing" : 800
+    "Field Hockey" : 1000
+    "Bowling" : 1300
+    "Golf" : 1600
+    "Frisbee" :  410
+    "Ping Pong" : 2000
+    "Cheerleading" : 2200
+    "Fencing" : 2400
+    "Esports" : 5
+    "Skateboarding" : 2800
+    "Hockey" : 1100
 }
 
 
@@ -102,7 +104,14 @@ def calcDistances(StudentA, StudentB) {
     # find the total distace for all 10 dimensions from user to each student
     # store average of distances total in student object
 
-#sort based on average
 
-# for 10 iterations
-    # return/display student objects
+
+
+
+
+#sort based on average
+# return 10 student objects
+def matchStudents(students):
+    students.sort(key = lamba x: x.matchAverage)
+    matched = students[:5]
+    return match
