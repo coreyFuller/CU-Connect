@@ -1,4 +1,4 @@
-import json
+import json #needed to read in JSON File
 
 
 class Student:
@@ -20,6 +20,7 @@ class Student:
         self.pwhash = hasval2
         self.totalDistance = 0
 
+#maps of classes to a distance line 
 classDict = {
     "CPSC 1010" : 0,
     "CPSC 1060" : 20
@@ -39,6 +40,7 @@ classDict = {
     "CPSC 4910" : 350,
  }
 
+# maps hobbies to a distance
 classHobbies = {
     "Coding" :
     "Virtual Reality" :
@@ -70,3 +72,19 @@ classHobbies = {
     "Skateboarding" :
     "Hockey" :
 }
+
+#holds the similarity ratio for the all students to
+#the one being matched
+matchAverage = [] 
+
+#read in info from the JSON file and pass it to an array of objects
+#build objects by putting info in the constructors
+
+#for all students in list
+    # find the total distace for all 10 dimensions from user to each student
+    # store average of distances total in student object
+
+#sort based on average
+
+# for 10 iterations
+    # return/display student objects
