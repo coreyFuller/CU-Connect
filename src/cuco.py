@@ -11,6 +11,8 @@ class Student:
     totalDistance = []
     matchAverage = [] 
 
+studentList = []
+
     # default constructor 
     def __init__(self, id, hobbies, classes, name, hasval1, hasval2): 
         self.ID = id
@@ -88,3 +90,4 @@ classHobbies = {
 
 # for 10 iterations
     # return/display student objects
+
