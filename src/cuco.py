@@ -16,23 +16,6 @@ class Student:
         self.unhash = hasval1
         self.pwhash = hasval2
         self.totalDistance = 0
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
 
 classDict = {
     "CPSC 1010" : 0,
