@@ -85,8 +85,18 @@ def calcDistances(StudentA, StudentB) {
     for x in range(5):
         StudentB.totalDistance += abs(classHobbies[StudentA.Hobbies[x]] - classHobbies[StudentB.Hobbies[x]])
     
-    
-
+    aStudClassVal = 0
+    bStudClassVal = 0
+    #Calculating mean value of Student A's classes
+    for x in StudentA.Classes:
+        aStudClassVal += classDict[x]
+    aStudClassVal /= len(StudentB.Classes)
+    #Calculating mean value of Student B's classes
+    for x in StudentB.Classes:
+        bStudClassVal += classDict[x]
+    bStudClassVal /= len(StudentB.Classes)
+    #Finding difference between mean values of A's classes and B's classes
+    StudentB.totalDistance += abs(aStudClassVal - bStudClassVal)
 }
 #for all students in list
     # find the total distace for all 10 dimensions from user to each student
