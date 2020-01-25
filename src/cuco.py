@@ -8,8 +8,8 @@ class Student:
     Name = []
     unhash
     pwhash
-    totalDistance = []
-    matchAverage = [] 
+    totalDistance
+    matchAverage 
 
 studentList = []
 
@@ -94,8 +94,14 @@ def calcDistances(StudentA, StudentB) {
     # find the total distace for all 10 dimensions from user to each student
     # store average of distances total in student object
 
+
+
+
+
+
 #sort based on average
-
-# for 10 iterations
-    # return/display student objects
-
+# return 10 student objects
+def matchStudents(students):
+    students.sort(key = lamba x: x.matchAverage)
+    matched = students[:5]
+    return match
