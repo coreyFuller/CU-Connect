@@ -38,7 +38,7 @@ class LoginScreen(GridLayout):
 class MyApp(App):
 
     def build(self):
-        Window.size = (500,600)
+        Window.size = (650,650)
         return LoginScreen()
 
 
