@@ -6,3 +6,5 @@ class Student:
     email
     Name = []
     Discord
+    totalDistance = []
+    
