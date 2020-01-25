@@ -1,3 +1,6 @@
+import json
+
+
 class Student:
     ID = 1
     Hobbies = []
