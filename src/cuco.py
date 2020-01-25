@@ -17,6 +17,12 @@ class Student:
 
 
 
+
+
+
+
+
+
 classDict = {
     "CPSC 1010" : 0,
     "CPSC 1060" : 20
@@ -28,12 +34,17 @@ classDict = {
     "CPSC 2310" : 160,
     "CPSC 3220" : 210,
     "CPSC 3720" : 220,
-    ""
+    "CPSC 3600" : 235,
+    "CPSC 3710" : 240,
+    "CPSC 4200" : 300,
+    "CPSC 4240" : 310,
+    "CPSC 4620" : 335,
+    "CPSC 4910" : 350,
  }
 
 classHobbies = {
     "Coding" :
-    "Virtual Reality" : 
+    "Virtual Reality" :
     "Video games" :
     "Robotics" :
     "Movies" : 
