@@ -5,13 +5,7 @@ class Student:
     ID
     Hobbies = []
     Classes = []
-<<<<<<< HEAD
-    Name = []
-    unhash = 0
-    pwhash = 0
-=======
     Name
->>>>>>> addb810dbeb1296eb12ac61344729cbbaa739630
     totalDistance
     matchAverage 
 
