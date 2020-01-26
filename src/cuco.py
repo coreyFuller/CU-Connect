@@ -26,7 +26,7 @@ studentList = []
 #maps of classes to a distance line 
 classDict = {
     "CPSC 1010" : 0,
-    "CPSC 1060" : 20
+    "CPSC 1060" : 20,
     "CPSC 1020" : 50,
     "CPSC 1070" : 70,
     "CPSC 2070" : 100,
@@ -117,3 +117,11 @@ def matchStudents(students):
 
 #sort based on average
 # return 10 student objects
+
+
+def main():
+    student1 = (1, ["Coding", "Virtual Reality"], ["CPSC 1010", "CPSC 1020"], ["Bob", "Smith"], 1000, 1002)
+    student2 = (2, ["Coding", "Virtual Reality"], ["CPSC 1060", "CPSC 2120"], ["Annie", "Hill"], 1003, 1004)
+    x = calcDistances(student1, student2)
+
+    
