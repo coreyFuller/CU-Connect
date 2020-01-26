@@ -29,6 +29,12 @@ get_args.add_argument(
 )
 
 get_args.add_argument(
+    "--email",
+    type=str,
+    default=""
+)
+
+get_args.add_argument(
     "--classes",
     nargs="*",
     type=str,
@@ -44,6 +50,12 @@ get_args.add_argument(
 
 #parse the arguments
 args = get_args.parse_args()
+
+while len(args.classes) != 5:
+    args.classes.append("-nan")
+
+while len(args.hobbies) != 5:
+    args.hobbies.append("-nan")
 
 # d["students"][0]["name"]
 # for student in d["students"]:
@@ -64,6 +76,7 @@ json_data['students'].append({
     'name'       : args.name,
     'username'   : args.user,
     'password'   : hash_password(args.pw),
+    'email'      : args.email,
     'classes'    : args.classes,
     'hobbies'    : args.hobbies,
     'connections': []
