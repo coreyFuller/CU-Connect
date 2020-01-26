@@ -134,10 +134,10 @@ def main():
     
     #sort based on average
     # return 10 student objects   
-    print("Here are " + matchStudent.Name + "'s matches: ")
-    print("\n")
+    print("Scott Lang: ")
     matchStudent.display()
     print("\n")
+    print("Here are " + matchStudent.Name + "'s matches: ")
     matched = matchStudents(studentList)  
     for x in matched:
         x.display()
