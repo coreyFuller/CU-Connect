@@ -131,6 +131,11 @@ def main():
     student2 = (2, ["Coding", "Virtual Reality"], ["CPSC 1060", "CPSC 2120"], ["Annie", "Hill"], 1003, 1004)
     x = calcDistances(student1, student2)
     print(x)
+    
+    with open('db.json') as json_file:
+        data = json.load(json_file)
+        for s in data['students']:
+            studentList.append(Student(s['ID'], s['name'], s['hobbies'], s['classes']))
 
     
 if __name__ == 'main':
