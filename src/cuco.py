@@ -138,6 +138,6 @@ def main():
             studentList.append(Student(s['ID'], s['name'], s['hobbies'], s['classes']))
 
     
-if __name__ == 'main':
+if __name__ == '__main__':
     main()
         
