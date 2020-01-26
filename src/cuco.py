@@ -83,6 +83,7 @@ classHobbies = {
 #read in info from the JSON file and pass it to an array of objects
 #build objects by putting info in the constructors
 
+#for x in studentList:
 def calcDistances(StudentA, StudentB) {
     totalDist = 0
     for x in range(5):
