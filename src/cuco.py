@@ -127,16 +127,16 @@ def matchStudents(students):
 
 
 def main():
-    student1 = Student(1, ["Coding", "Virtual Reality"], ["CPSC 1010", "CPSC 1020"], ["Bob", "Smith"])
-    student2 = Student(2, ["Coding", "Virtual Reality"], ["CPSC 1060", "CPSC 2120"], ["Annie", "Hill"])
+    student1 = Student(1, "Tony Stark", ["Coding", "Virtual Reality"], ["CPSC 1010", "CPSC 1020"])
+    student2 = Student(2, "Steve Rogers", ["Coding", "Virtual Reality"], ["CPSC 1060", "CPSC 2120"])
     x = calcDistances(student1, student2)
     print(x)
     print("testing yo")
     
-    with open('db.json') as json_file:
-        data = json.load(json_file)
-        for s in data['students']:
-            studentList.append(Student(s['ID'], s['name'], s['hobbies'], s['classes']))
+    # with open('db.json') as json_file:
+    #     data = json.load(json_file)
+    #     for s in data['students']:
+    #         studentList.append(Student(s['ID'], s['name'], s['hobbies'], s['classes']))
 
     
 if __name__ == '__main__':
