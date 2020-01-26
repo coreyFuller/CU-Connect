@@ -14,6 +14,7 @@ from kivy.uix.checkbox import CheckBox
 from kivy.uix.scrollview import ScrollView
 
 
+
 class HobbyChooser(Screen):
     hobbies = ObjectProperty(None)
 
@@ -60,7 +61,7 @@ class FillUserInfo(Screen):
             return subbutt()
         else:
             # self.reset()
-            input.extend(self.courselist)
+            input.append(self.courselist)
             sm.current = "hobbies"
 
     def reset(self):
@@ -87,16 +88,17 @@ class LoginWindow(Screen):
         sm.current = "create"
 
     def loginBtn(self):
-        if useraccept() is True:
+        if self.useraccept() is True:
             self.reset()
             sm.current="main"
         else: 
-            return Popup(title='NO ACCESS', 
+            pop = Popup(title='NO ACCESS', 
                     content=Label(text="Incorrect Username/Password"), 
                     size_hint=(None,None), size=(400,300))
+            return pop.open()
 
-    def useraccept():
-        return False
+    def useraccept(self):
+        return True
 
     def reset(self):
         self.username.text = ""
@@ -139,9 +141,9 @@ class MainWindow(Screen):
 
     def on_enter(self, *args):
         print(input)
-        self.n.text = "Account Name: Jamie"
-        self.email.text = "Email: Ketchup@gmail.com"
-        self.created.text = "Created On: Now"
+        self.n.text = "Account Name: "+input[0]
+        self.email.text = "Email: " + input[1]
+        #self.created.text = "Courses: " + input[2]
 
 
 def subbutt():
