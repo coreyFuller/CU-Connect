@@ -30,8 +30,9 @@ class HobbyChooser(Screen):
             return subbutt()
         else:
             # self.reset()
+            input.extend(self.hobbylist)
             sm.current = "main"
-            print(self.hobbylist)
+            
 
 
     def reset(self):
@@ -59,6 +60,7 @@ class FillUserInfo(Screen):
             return subbutt()
         else:
             # self.reset()
+            input.extend(self.courselist)
             sm.current = "hobbies"
 
     def reset(self):
@@ -85,9 +87,16 @@ class LoginWindow(Screen):
         sm.current = "create"
 
     def loginBtn(self):
-        print(self.username.text)
-        self.reset()
-        sm.current="main"
+        if useraccept() is True:
+            self.reset()
+            sm.current="main"
+        else: 
+            return Popup(title='NO ACCESS', 
+                    content=Label(text="Incorrect Username/Password"), 
+                    size_hint=(None,None), size=(400,300))
+
+    def useraccept():
+        return False
 
     def reset(self):
         self.username.text = ""
@@ -103,6 +112,14 @@ class CreateAccountWindow(Screen):
         sm.current = "login"
 
     def submit(self):
+        if self.namee.text is "" or self.email.text is "" or self.password.text is "":
+            pop = Popup(title='Blank Slots', 
+                    content=Label(text="You have left spaces blank"), 
+                    size_hint=(None,None), size=(400,300))
+            return pop.open()
+        input.append(self.namee.text)
+        input.append(self.email.text)
+        input.append(self.password)
         self.reset()
         sm.current = "userinfo"
 
@@ -121,9 +138,11 @@ class MainWindow(Screen):
         sm:current = "login"
 
     def on_enter(self, *args):
+        print(input)
         self.n.text = "Account Name: Jamie"
         self.email.text = "Email: Ketchup@gmail.com"
         self.created.text = "Created On: Now"
+
 
 def subbutt():
     pop = Popup(title='Too many chosen', 
@@ -132,6 +151,8 @@ def subbutt():
 
 class WindowManager(ScreenManager):
     pass
+
+input = []
 
 kv = Builder.load_file("my.kv")
 sm = WindowManager()
