@@ -13,6 +13,7 @@ from kivy.uix.dropdown import DropDown
 from kivy.uix.checkbox import CheckBox 
 from kivy.uix.scrollview import ScrollView
 import subprocess
+import cuco
 
 
 
@@ -141,6 +142,9 @@ class MainWindow(Screen):
                 ])
         self.n.text = "Account Name: " + input[0]
         self.email.text = "Email: " + input[1]
+
+    # def on_connect(self):
+    #     cuco.main()
 
 
 def subbutt():
