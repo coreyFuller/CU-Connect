@@ -12,6 +12,8 @@ from kivy.base import runTouchApp
 from kivy.uix.dropdown import DropDown
 from kivy.uix.checkbox import CheckBox 
 from kivy.uix.scrollview import ScrollView
+import subprocess
+
 
 
 class HobbyChooser(Screen):
@@ -30,7 +32,7 @@ class HobbyChooser(Screen):
             return subbutt()
         else:
             # self.reset()
-            input.extend(self.hobbylist)
+            input.append(self.hobbylist)
             sm.current = "main"
             
 
@@ -54,26 +56,18 @@ class FillUserInfo(Screen):
             #print("Checkbox unchecked "+ checkboxInstance)
             self.courselist.remove(checkboxInstance)
         print(self.courselist)
+        
 
     def hobbies(self):
         if len(self.courselist) > 5 or len(self.courselist) < 1:
             return subbutt()
         else:
             # self.reset()
-            input.extend(self.courselist)
+            input.append(self.courselist)
             sm.current = "hobbies"
 
     def reset(self):
         self.major.text = ""
-
-
-            
-
-    # def courseBtn(self):
-    #     print("Class Press")
-    
-    # def hobbiesBtn(self):
-    #      print("Hobbies Press")
 
 class ConnectScreen(Screen):
     print("Hey")
@@ -87,16 +81,17 @@ class LoginWindow(Screen):
         sm.current = "create"
 
     def loginBtn(self):
-        if useraccept() is True:
+        if self.useraccept() is True:
             self.reset()
             sm.current="main"
         else: 
-            return Popup(title='NO ACCESS', 
+            pop = Popup(title='NO ACCESS', 
                     content=Label(text="Incorrect Username/Password"), 
                     size_hint=(None,None), size=(400,300))
+            return pop.open()
 
-    def useraccept():
-        return False
+    def useraccept(self):
+        return True
 
     def reset(self):
         self.username.text = ""
@@ -139,6 +134,11 @@ class MainWindow(Screen):
 
     def on_enter(self, *args):
         print(input)
+        subprocess.call(['python', 'cucodb.py', '--user', input[0], '--pw', 'hello', '--name', input[1], 
+                '--email',input[1],
+                '--classes', input[3], 
+                '--hobbies', input[4]
+                ])
         self.n.text = "Account Name: Jamie"
         self.email.text = "Email: Ketchup@gmail.com"
         self.created.text = "Created On: Now"
