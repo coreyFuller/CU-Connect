@@ -99,13 +99,11 @@ def calcDistances(StudentA, StudentB):
 #Calculating mean value of Student A's classes
     for x in StudentA.Classes:
         aStudClassVal += classDict[x]
-    aStudClassVal /= len(StudentB.Classes)
     #Calculating mean value of Student B's classes
     for x in StudentB.Classes:
         bStudClassVal += classDict[x]
-    bStudClassVal /= len(StudentB.Classes)
     #Finding difference between mean values of A's classes and B's classes
-    totalDist += abs(aStudClassVal - bStudClassVal)
+    totalDist += (aStudClassVal + bStudClassVal) / 10
     return totalDist
 
 def matchStudents(students):
