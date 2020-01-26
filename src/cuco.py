@@ -101,10 +101,6 @@ def calcDistances(StudentA, StudentB):
     for x in range(5):
         hobbyDist += abs(classHobbies[StudentA.Hobbies[x]] - classHobbies[StudentB.Hobbies[x]])
     hobbieMean = hobbyDist / 5
-#Calculating mean value of Student A's classes
-    # for x in StudentA.Classes:
-    #     aStudClassVal += classDict[x]
-    # classMean = aStudClassVal / 5
     #Calculating mean value of Student B's classes
     for x in range(5):
         classDist += abs(classDict[StudentA.Classes[x]] - classDict[StudentB.Classes[x]])
