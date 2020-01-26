@@ -249,19 +249,18 @@
             "UID": 2,
             "email": "drax@clemson.edu",
             "classes": [
-                "CPSC 1060--hobbies",
+                "CPSC 1060",
+                "-nan",
+                "-nan",
+                "-nan",
+                "-nan"
+            ],
+            "hobbies": [
                 "Videogames",
                 "Movies",
                 "Archery",
                 "Robotics",
                 "Virtual Reality"
-            ],
-            "hobbies": [
-                "-nan",
-                "-nan",
-                "-nan",
-                "-nan",
-                "-nan"
             ],
             "connections": []
         },
@@ -340,19 +339,16 @@
             "classes": [
                 "CPSC 2150",
                 "CPSC 2120",
-                "CPSC 2310--hobbies",
+                "CPSC 2310",
+                "-nan",
+                "-nan"
+            ],
+            "hobbies": [
                 "Esports",
                 "Photography",
                 "Track",
                 "Videogames",
                 "Lacrosse"
-            ],
-            "hobbies": [
-                "-nan",
-                "-nan",
-                "-nan",
-                "-nan",
-                "-nan"
             ],
             "connections": []
         },
@@ -431,19 +427,16 @@
             "classes": [
                 "CPSC 4820",
                 "CPSC 4620",
-                "CPSC 3220--hobbies",
+                "CPSC 3220",
+                "-nan",
+                "-nan"
+            ],
+            "hobbies": [
                 "Esports",
                 "Ping Pong",
                 "Virtual Reality",
                 "Baseball",
                 "Volleyball"
-            ],
-            "hobbies": [
-                "-nan",
-                "-nan",
-                "-nan",
-                "-nan",
-                "-nan"
             ],
             "connections": []
         },
@@ -455,19 +448,17 @@
             "email": "lodinso@clemson.edu",
             "classes": [
                 "CPSC 1010",
-                "CPSC 2070--hobbies",
+                "CPSC 2070",
+                "-nan",
+                "-nan",
+                "-nan"
+            ],
+            "hobbies": [
                 "Esports",
                 "Ping Pong",
                 "Archery",
                 "Movies",
                 "Coding"
-            ],
-            "hobbies": [
-                "-nan",
-                "-nan",
-                "-nan",
-                "-nan",
-                "-nan"
             ],
             "connections": []
         },
