@@ -12,6 +12,7 @@ from kivy.base import runTouchApp
 from kivy.uix.dropdown import DropDown
 from kivy.uix.checkbox import CheckBox 
 from kivy.uix.scrollview import ScrollView
+import subprocess
 
 
 
@@ -31,7 +32,7 @@ class HobbyChooser(Screen):
             return subbutt()
         else:
             # self.reset()
-            input.extend(self.hobbylist)
+            input.append(self.hobbylist)
             sm.current = "main"
             
 
@@ -55,6 +56,7 @@ class FillUserInfo(Screen):
             #print("Checkbox unchecked "+ checkboxInstance)
             self.courselist.remove(checkboxInstance)
         print(self.courselist)
+        
 
     def hobbies(self):
         if len(self.courselist) > 5 or len(self.courselist) < 1:
@@ -66,15 +68,6 @@ class FillUserInfo(Screen):
 
     def reset(self):
         self.major.text = ""
-
-
-            
-
-    # def courseBtn(self):
-    #     print("Class Press")
-    
-    # def hobbiesBtn(self):
-    #      print("Hobbies Press")
 
 class ConnectScreen(Screen):
     print("Hey")
@@ -141,9 +134,14 @@ class MainWindow(Screen):
 
     def on_enter(self, *args):
         print(input)
-        self.n.text = "Account Name: "+input[0]
-        self.email.text = "Email: " + input[1]
-        #self.created.text = "Courses: " + input[2]
+        subprocess.call(['./cucodb.py', '--user', input[0], '--pw', input[2], '--name', input[1], 
+                '--email',input[1],
+                '--classes', input[3], 
+                '--hobbies', input[4]
+                ])
+        self.n.text = "Account Name: Jamie"
+        self.email.text = "Email: Ketchup@gmail.com"
+        self.created.text = "Created On: Now"
 
 
 def subbutt():
