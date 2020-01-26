@@ -6,8 +6,8 @@ class Student:
     Hobbies = []
     Classes = []
     Name = []
-    unhash
-    pwhash
+    unhash = 0
+    pwhash = 0
     totalDistance
     matchAverage 
 
