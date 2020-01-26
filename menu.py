@@ -21,9 +21,15 @@ class LoginWindow(Screen):
         self.email.text = ""
         self.password.text = ""
 
+<<<<<<< HEAD
     def createBtn(self):
         self.reset()
         sm.current = "create"
+=======
+        # self.add_widget(Label(text='[font=Helvetica]'+'Email'+'[/font]', markup = True))
+        # self.email = TextInput(multiline=False)
+        # self.add_widget(self.email)
+>>>>>>> 4bdfa7e16ef2eb62d1ef5d353fbc580883acd146
 
     def loginBtn(self):
         self.reset()
@@ -87,7 +93,12 @@ sm.current = "login"
 
 class MyApp(App):
     def build(self):
+<<<<<<< HEAD
         return sm
+=======
+        Window.size = (650,650)
+        return LoginScreen()
+>>>>>>> 4bdfa7e16ef2eb62d1ef5d353fbc580883acd146
 
 
 if __name__ == "__main__":
