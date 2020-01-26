@@ -28,9 +28,9 @@ studentList = []
 classDict = {
     "CPSC 1010" : 0,
     "CPSC 1060" : 20,
-    "-nan" : 0,
+    "CPSC 1070" : 0,
     "CPSC 1010" : 5,
-    "CPSC 1060" : 20
+    "CPSC 1060" : 20,
     "CPSC 1020" : 50,
     "CPSC 1070" : 70,
     "CPSC 2070" : 100,
