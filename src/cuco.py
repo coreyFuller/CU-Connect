@@ -92,8 +92,8 @@ classHobbies = {
 
 def calcDistances(StudentA, StudentB):
     totalDist = 0
-    for x in range(5):
-        totalDist += abs(classHobbies[StudentA.Hobbies[x]] - classHobbies[StudentB.Hobbies[x]])
+    # for x in range(5):
+        # totalDist += abs(classHobbies[StudentA.Hobbies[x]] - classHobbies[StudentB.Hobbies[x]])
     aStudClassVal = 0
     bStudClassVal = 0
 #Calculating mean value of Student A's classes
