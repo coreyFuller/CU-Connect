@@ -8,6 +8,21 @@ from kivy.properties import ObjectProperty
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.lang import Builder
 from kivy.uix.popup import Popup
+from kivy.base import runTouchApp
+from kivy.uix.dropdown import DropDown
+
+class FillUserInfo(Screen):
+    # major = ObjectProperty(None)
+    # course = ObjectProperty(None)
+    # hobbies = ObjectProperty(None)
+    
+    # def courseBtn(self):
+    #     print("Class Press")
+    
+    # def hobbiesBtn(self):
+    #      print("Hobbies Press")
+    print("hey")
+    
 
 class LoginWindow(Screen):
     username = ObjectProperty(None)
@@ -36,6 +51,8 @@ class CreateAccountWindow(Screen):
         sm.current = "login"
 
     def submit(self):
+        self.reset()
+        sm.current = "userinfo"
         return subbutt()
 
     def reset(self):
@@ -68,7 +85,7 @@ class WindowManager(ScreenManager):
 kv = Builder.load_file("my.kv")
 sm = WindowManager()
 
-screens = [LoginWindow(name="login"), CreateAccountWindow(name="create"), MainWindow(name="main")]
+screens = [LoginWindow(name="login"), CreateAccountWindow(name="create"), MainWindow(name="main"), FillUserInfo(name="userinfo")]
 for screen in screens:
     sm.add_widget(screen)
 

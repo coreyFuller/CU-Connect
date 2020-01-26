@@ -1,3 +1,21 @@
+<FillUserInfo>:
+    name: "userinfo"
+
+    FloatLayout:
+
+        Label:
+            text:"Major? "
+            font_size: (root.width**2 + root.height**2) / 13**4
+            pos_hint: {"x":0.1, "top":0.7}
+            size_hint: 0.35, 0.15
+
+        TextInput:
+            id: major
+            font_size: (root.width**2 + root.height**2) / 13**4
+            multiline: True
+            pos_hint: {"x": 0.45 , "top":0.67}
+            size_hint: 0.4, 0.09
+
 <LoginWindow>:
     name: "login"
 
