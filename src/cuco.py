@@ -19,14 +19,14 @@ class Student:
         self.Email = email
         self.totalDistance = 0
         self.matchAverage = 0
+    def display(self):
+        print(self.ID, self.Email, self.Name, self.Hobbies, self.Classes)
 
 studentList = []
 
 #maps of classes to a distance line 
 classDict = {
-    "CPSC 1010" : 0,
-    "CPSC 1060" : 20,
-    "CPSC 1070" : 0,
+    "-nan" : 0,
     "CPSC 1010" : 5,
     "CPSC 1060" : 20,
     "CPSC 1020" : 50,
@@ -86,7 +86,7 @@ classHobbies = {
 }
 
 
-#holds the similarity ratio for the all students to
+#holds the similarity ratio for the all students tof
 #the one being matched
 
 #read in info from the JSON file and pass it to an array of objects
@@ -121,12 +121,12 @@ def main():
     # student2 = Student(2, "Steve Rogers", ["Coding", "Virtual Reality"], ["CPSC 1060", "CPSC 2120"])
     # x = calcDistances(student1, student2)
     
-    # with open('db.json') as json_file:
-    #     data = json.load(json_file)
-    #     for s in data['students']:
-    #         studentList.append(Student(s['ID'], s['name'], s['email'], s['hobbies'], s['classes']))
-    
+    with open('db.json') as json_file:
+        data = json.load(json_file)
+        for s in data['students']:
+            studentList.append(Student(s['UID'], s['name'], s['email'], s['hobbies'], s['classes']))
     matchStudent = studentList.pop()
+    matchStudent.display()
     
     #for all students in list
     # find the total distace for all 10 dimensions from user to each student

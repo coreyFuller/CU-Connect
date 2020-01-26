@@ -51,19 +51,12 @@ get_args.add_argument(
 #parse the arguments
 args = get_args.parse_args()
 
-while len(args.classes) != 5:
-    args.classes.append("-nan")
 
-while len(args.hobbies) != 5:
-    args.hobbies.append("-nan")
+if len(args.classes) != 5:
+    args.classes.extend(["-nan" for i in range (5 - len(args.classes))])
+if len(args.hobbies) != 5:
+    args.hobbies.extend(["-nan" for i in range (5 - len(args.hobbies))])    
 
-# d["students"][0]["name"]
-# for student in d["students"]:
-#     student["name"]
-
-# for key in d:
-#     print(key)
-#     d[key]
 
 json_data = {}
 if os.stat("db.json").st_size != 0:
@@ -86,4 +79,3 @@ json_data['students'].append({
 
 with open('db.json', 'w') as json_file:
     json.dump(json_data, json_file, indent=4)
-    # json.dump(json_data, json_file)
