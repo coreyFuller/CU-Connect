@@ -11,8 +11,6 @@ class Student:
     totalDistance
     matchAverage 
 
-studentList = []
-
     # default constructor 
     def __init__(self, id, hobbies, classes, name, hasval1, hasval2): 
         self.ID = id
@@ -22,6 +20,9 @@ studentList = []
         self.unhash = hasval1
         self.pwhash = hasval2
         self.totalDistance = 0
+
+studentList = []
+
 
 #maps of classes to a distance line 
 classDict = {
