@@ -1,3 +1,414 @@
+<HobbyChooser>:
+    name: "hobbies"
+
+    Label:
+        text:"Hobbies? "
+        font_size: (root.width**2 + root.height**2) / 13**4
+        pos_hint: {"x":0.1, "top":0.5}
+        size_hint: 0.35, 0.15
+
+    DropDown:
+        id: hobbypicker
+        on_select: launch.text = '{}'.format(args[1])
+
+        GridLayout:
+            size_hint_y: None
+            height: 440
+            cols: 2
+            row_default_height: '20dp'
+
+            Widget:
+                on_parent: hobbypicker.dismiss()
+
+            Label:
+                id: coding
+                text: 'Coding'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(coding.text, self.active)
+
+            Label:
+                id: VR
+                text: 'Virtual Reality'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: C1060
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(VR.text, self.active)
+
+            Label:
+                id: vidya
+                text: 'Video Games'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(vidya.text, self.active)
+
+            Label:
+                id: robots
+                text: 'Robotics'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(robots.text, self.active)
+
+            Label:
+                id: movies
+                text: 'Movies'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(movies.text, self.active)
+
+            Label:
+                id: music
+                text: 'Music/Music Production'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(music.text, self.active)
+
+            Label:
+                id: photos
+                text: 'Photography'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(photos.text, self.active)
+
+            Label:
+                id: archery
+                text: 'Archery'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(archery.text, self.active)
+
+            Label:
+                id: bball
+                text: 'Basketball'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(bball.text, self.active)
+
+            Label:
+                id: baseball
+                text: 'Baseball'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 3710'
+                on_active:
+                    root.on_checkbox_active(baseball.text, self.active)
+
+            Label:
+                id: track
+                text: 'Track'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(track.text, self.active)
+
+            Label:
+                id: crossc
+                text: 'Cross Country'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: CPSC4200
+                text: 'CPSC 4200'
+                on_active:
+                    root.on_checkbox_active(crossc.text, self.active)
+
+            Label:
+                id: vball
+                text: 'Volleyball'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: CPSC4240
+                text: 'CPSC 4240'
+                on_active:
+                    root.on_checkbox_active(vball.text, self.active)
+
+            Label:
+                id: lacrosse
+                text: 'Lacrosse'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4620'
+                on_active:
+                    root.on_checkbox_active(lacrosse.text, self.active)
+
+            Label:
+                id: soccer
+                text: 'Soccer'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(soccer.text, self.active)
+
+            Label:
+                id: swimming
+                text: 'Swimming'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(swimming.text, self.active)
+        
+            Label:
+                id: football
+                text: 'Football'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(football.text, self.active)
+            
+            Label:
+                id: rowing
+                text: 'Rowing'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(rowing.text, self.active)
+
+            Label:
+                id: fhockey
+                text: 'Feild Hockey'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(fhockey.text, self.active)
+
+            Label:
+                id: bowling
+                text: 'Bowling'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(bowling.text, self.active)
+
+            Label:
+                id: golf
+                text: 'Golf'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(golf.text, self.active)
+
+            Label:
+                id: frisbee
+                text: 'Frisbee'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(frisbee.text, self.active)
+
+            Label:
+                id: ppong
+                text: 'Ping Pong'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(ppong.text, self.active)
+
+            Label:
+                id: cleading
+                text: 'Cheerleading'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(cleading.text, self.active)
+
+            Label:
+                id: fencing
+                text: 'Fencing'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(fencing.text, self.active)
+
+            Label:
+                id: esports
+                text: 'Esports'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(esports.text, self.active)
+
+            Label:
+                id: sboard
+                text: 'Skateboarding'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(sboard.text, self.active)
+
+            Label:
+                id: hockey
+                text: 'Hockey'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(hockey.text, self.active)
+
+            Label:
+                id: chess
+                text: 'Chess'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(chess.text, self.active)
+
+            Label:
+                id: art
+                text: 'Drawing/Art'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(art.text, self.active)
+
+            Label:
+                id: cooking
+                text: 'Cooking'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(cooking.text, self.active)
+
+            Label:
+                id: playmusic
+                text: 'Playing Music'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(playmusic.text, self.active)
+
+            Label:
+                id: martarts
+                text: 'Martial Arts'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(martarts.text, self.active)
+
+            Label:
+                id: bgames
+                text: 'Board Games'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'bgames'
+                on_active:
+                    root.on_checkbox_active(fhockey.text, self.active)
+
+    Button:
+        id: launch
+        text: '-'
+        on_release: hobbypicker.open(self)
+        size_hint_y: None
+        height: '48dp'
+        pos_hint: {"x": .45, "top": 0.47}
+        size_hint: 0.4, 0.09
+
+    Button:
+        id: next
+        text: "Connect me!"
+        pos_hint: {"x": .45, "top": 0.27}
+        size_hint: 0.4, 0.09
+        on_release: root.profile()
+
 <FillUserInfo>:
     name: "userinfo"
 
@@ -19,10 +430,186 @@
 
         TextInput:
             id: major
-            font_size: (root.width**2 + root.height**2) / 13**4
+            font_size: (root.width**2 + root.height**2) / 14**4
             multiline: True
             pos_hint: {"x": 0.45 , "top":0.67}
             size_hint: 0.4, 0.09
+
+    DropDown:
+        id: course
+        on_select: launch.text = '{}'.format(args[1])
+
+        Widget:
+            on_parent: course.dismiss()
+
+        GridLayout:
+            size_hint_y: None
+            height: 440
+            cols: 2
+            row_default_height: '10dp'
+            Label:
+                id: CPSC1010
+                text: 'CPSC 1010'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(CPSC1010.text, self.active)
+
+            Label:
+                id: CPSC1060
+                text: 'CPSC 1060'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: C1060
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(CPSC1060.text, self.active)
+
+            Label:
+                id: CPSC1020
+                text: 'CPSC 1020'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(CPSC1020.text, self.active)
+
+            Label:
+                id: CPSC1070
+                text: 'CPSC 1070'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(CPSC1070.text, self.active)
+
+            Label:
+                id: CPSC2070
+                text: 'CPSC 2070'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(CPSC2070.text, self.active)
+
+            Label:
+                id: CPSC2120
+                text: 'CPSC 2120'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(CPSC2120.text, self.active)
+
+            Label:
+                id: CPSC2150
+                text: 'CPSC 2150'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(CPSC2150.text, self.active)
+
+            Label:
+                id: CPSC2310
+                text: 'CPSC 2310'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(CPSC2310.text, self.active)
+
+            Label:
+                id: CPSC3220
+                text: 'CPSC 3220'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(CPSC3220.text, self.active)
+
+            Label:
+                id: CPSC3710
+                text: 'CPSC 3710'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 3710'
+                on_active:
+                    root.on_checkbox_active(CPSC3710.text, self.active)
+
+            Label:
+                id: CPSC4200
+                text: 'CPSC 4200'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'check me'
+                on_active:
+                    root.on_checkbox_active(CPSC4200.text, self.active)
+
+            Label:
+                id: CPSC4200
+                text: 'CPSC 4240'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: CPSC4200
+                text: 'CPSC 4200'
+                on_active:
+                    root.on_checkbox_active(CPSC4200.text, self.active)
+
+            Label:
+                id: CPSC4240
+                text: 'CPSC 4240'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: CPSC4240
+                text: 'CPSC 4240'
+                on_active:
+                    root.on_checkbox_active(CPSC4240.text, self.active)
+
+            Label:
+                id: CPSC4620
+                text: 'CPSC 4620'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4620'
+                on_active:
+                    root.on_checkbox_active(CPSC4620.text, self.active)
+
+            Label:
+                id: CPSC4910
+                text: 'CPSC 4910'
+                text_size: self.size
+                valign: 'middle'
+            CheckBox:
+                id: vecle
+                text: 'CPSC 4910'
+                on_active:
+                    root.on_checkbox_active(CPSC4910.text, self.active)
         
     Button:
         id: launch
@@ -33,29 +620,12 @@
         pos_hint: {"x": .45, "top": 0.47}
         size_hint: 0.4, 0.09
 
-    DropDown:
-
-        id: course
-        on_select: launch.text = 'Selected value: {}'.format(args[1])
-
-        Button:
-            text: 'Value A'
-            size_hint_y: None
-            height: '48dp'
-            on_release: course.select('A')
-
-        Button:
-            text: 'Value B'
-            size_hint_y: None
-            height: '48dp'
-            on_release: course.select('B')
-
-        Button:
-            text: 'Value C'
-            size_hint_y: None
-            height: '48dp'
-            on_release: course.select('C')
-        
+    Button:
+        id: next
+        text: "continue"
+        pos_hint: {"x": .45, "top": 0.27}
+        size_hint: 0.4, 0.09
+        on_release: root.hobbies()
 
 <LoginWindow>:
     name: "login"
@@ -216,9 +786,17 @@
             text: "Created: "
 
         Button:
-            pos_hint:{"x":0.2, "y": 0.1}
-            size_hint:0.6,0.2
+            pos_hint:{"x":0.25, "y": 0.1}
+            size_hint:0.15,0.1
             text: "Log Out"
             on_release:
                 app.root.current = "login"
                 root.manager.transition.direction = "down"
+
+        Button:
+            pos_hint:{"x":0.6, "y": 0.1}
+            size_hint:0.15,0.1
+            text: "Connect Me!"
+            on_release:
+                app.root.current = "connect"
+                root.manager.transition.direction = "up"

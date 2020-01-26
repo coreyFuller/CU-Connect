@@ -10,18 +10,66 @@ from kivy.lang import Builder
 from kivy.uix.popup import Popup
 from kivy.base import runTouchApp
 from kivy.uix.dropdown import DropDown
+from kivy.uix.checkbox import CheckBox 
+
+class HobbyChooser(Screen):
+    hobbies = ObjectProperty(None)
+
+    hobbylist = []
+
+    def on_checkbox_active(self, checkboxInstance, isActive): 
+        if isActive: 
+            self.hobbylist.append(checkboxInstance) 
+        else: 
+            self.hobbylist.remove(checkboxInstance)
+
+    def profile(self):
+        if len(self.hobbylist) > 5 or len(self.hobbylist) < 1:
+            return subbutt()
+        else:
+            # self.reset()
+            sm.current = "main"
+            print(self.hobbylist)
+
+
+    def reset(self):
+        self.major.text = ""
 
 class FillUserInfo(Screen):
     major = ObjectProperty(None)
     course = ObjectProperty(None)
-    hobbies = ObjectProperty(None)
+
+    courselist = []
     
+    def on_checkbox_active(self, checkboxInstance, isActive): 
+        if isActive: 
+            #self.lbl_active.text ="Checkbox is ON"
+            #print("Checkbox Checked" + checkboxInstance)
+            self.courselist.append(checkboxInstance) 
+        else: 
+           # self.lbl_active.text ="Checkbox is OFF"
+            #print("Checkbox unchecked "+ checkboxInstance)
+            self.courselist.remove(checkboxInstance)
+        print(self.courselist)
+
+    def hobbies(self):
+        if len(self.courselist) > 5 or len(self.courselist) < 1:
+            return subbutt()
+        else:
+            # self.reset()
+            sm.current = "hobbies"
+
+    def reset(self):
+        self.major.text = ""
+
+
+            
+
     # def courseBtn(self):
     #     print("Class Press")
     
     # def hobbiesBtn(self):
     #      print("Hobbies Press")
-    print("hey")
     
 
 class LoginWindow(Screen):
@@ -53,7 +101,6 @@ class CreateAccountWindow(Screen):
     def submit(self):
         self.reset()
         sm.current = "userinfo"
-        return subbutt()
 
     def reset(self):
         self.email.text = ""
@@ -75,8 +122,8 @@ class MainWindow(Screen):
         self.created.text = "Created On: Now"
 
 def subbutt():
-    pop = Popup(title='SUBMITTED', 
-                    content=Label(text="Your thing has been submitted"), size_hint=(None,None), size=(400,300))
+    pop = Popup(title='Too many chosen', 
+                    content=Label(text="Pick between one and\n five options, please"), size_hint=(None,None), size=(400,300))
     pop.open()
 
 class WindowManager(ScreenManager):
@@ -85,7 +132,11 @@ class WindowManager(ScreenManager):
 kv = Builder.load_file("my.kv")
 sm = WindowManager()
 
-screens = [LoginWindow(name="login"), CreateAccountWindow(name="create"), MainWindow(name="main"), FillUserInfo(name="userinfo")]
+screens = [LoginWindow(name="login"), 
+            CreateAccountWindow(name="create"), 
+            MainWindow(name="main"), 
+            FillUserInfo(name="userinfo"),
+            HobbyChooser(name="hobbies")]
 for screen in screens:
     sm.add_widget(screen)
 
