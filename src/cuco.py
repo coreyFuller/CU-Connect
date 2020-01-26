@@ -5,16 +5,18 @@ class Student:
     ID = 0
     Hobbies = []
     Classes = []
-    Name = []
+    Name = " "
+    Email = " "
     totalDistance = 0
     matchAverage = 0
 
     # default constructor 
-    def __init__(self, idval, name, hobbies, classes): 
+    def __init__(self, idval, name, email, hobbies, classes): 
         self.ID = idval
         self.Name = name
         self.Hobbies = hobbies
         self.Classes = classes
+        self.Email = email
         self.totalDistance = 0
         self.matchAverage = 0
 
@@ -48,7 +50,7 @@ classHobbies = {
     "-nan" : 0,
     "Coding" : 5,
     "Virtual Reality" : 7,
-    "Video games" : 8,
+    "Videogames" : 8,
     "Robotics" : 12,
     "Movies" :  14,
     "Music/Music Production" : 16,
@@ -107,22 +109,12 @@ def calcDistances(StudentA, StudentB):
     return totalDist
 
 def matchStudents(students):
+    #sorts objects based on average
     students.sort(key = lambda x: x.matchAverage)
+    #creates list of top 5 matches
     matched = students[:5]
-    return match
-
-#for all students in list
-    # find the total distace for all 10 dimensions from user to each student
-    # store average of distances total in student object
-
-
-
-
-
-
-#sort based on average
-# return 10 student objects
-
+    #returns list
+    return matched
 
 def main():
     student1 = Student(1, "Tony Stark", ["Coding", "Virtual Reality"], ["CPSC 1010", "CPSC 1020"])
@@ -134,7 +126,20 @@ def main():
     # with open('db.json') as json_file:
     #     data = json.load(json_file)
     #     for s in data['students']:
-    #         studentList.append(Student(s['ID'], s['name'], s['hobbies'], s['classes']))
+    #         studentList.append(Student(s['ID'], s['name'], s['email'], s['hobbies'], s['classes']))
+    
+    
+    
+    #for all students in list
+    # find the total distace for all 10 dimensions from user to each student
+    # store average of distances total in student object
+    for x in studentList:
+        x.totalDistance += calcDistances(, x);
+        x.matchAverage = totalDistance/10
+    
+    #sort based on average
+    # return 10 student objects   
+    matched = matchStudents(studentList)  
 
     
 if __name__ == '__main__':
