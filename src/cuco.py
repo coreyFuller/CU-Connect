@@ -141,6 +141,7 @@ def main():
     matched = matchStudents(studentList)  
     for x in matched:
         x.display()
+    return matched
 
     
 if __name__ == '__main__':

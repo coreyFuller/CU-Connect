@@ -134,13 +134,13 @@ class MainWindow(Screen):
 
     def on_enter(self, *args):
         print(input)
-       # subprocess.call(['./cucodb.py', '--user', input[0], '--pw', input[2], '--name', input[1], 
-                # '--email',input[1],
-                # '--classes', input[3], 
-                # '--hobbies', input[4]
-           #     ])
+        subprocess.call(['python', 'cucodb.py', '--user', input[0], '--pw', 'hello', '--name', input[1], 
+                '--email',input[1],
+                '--classes', input[3], 
+                '--hobbies', input[4]
+                ])
         self.n.text = "Account Name: " + input[0]
-        self.email.text = "Email: "  + input[1]
+        self.email.text = "Email: " + input[1]
 
 
 def subbutt():
