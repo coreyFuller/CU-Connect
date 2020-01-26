@@ -1,221 +1,199 @@
 {
     "students": [
         {
-            "name": "'Ashton Sobeck'",
-            "username": "'asobeck'",
-            "password": "a4dec65b08a6fea3db3948c261dcdbaf9f2fec8f07d430fe5c44299a5e10d387",
+            "name": "Ashton Sobeck",
+            "username": "asobeck",
+            "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
             "UID": 2,
-            "email": "'asobeck@clemson.edu'",
+            "email": "asobeck@clemson.edu",
             "classes": [
-                "'CPSC 3600'",
-                "'CPSC 4620'",
-                "'CPSC 3720'",
-                "'CPSC 2810'",
-                "'CPSC 2310'"
+                "CPSC 3600",
+                "CPSC 4620",
+                "CPSC 3720",
+                "CPSC 2810",
+                "CPSC 2310"
             ],
             "hobbies": [
-                "'Esports'",
-                "'Ping Pong'",
-                "'Bowling'",
-                "'Track'",
-                "'Golf'"
+                "Esports",
+                "Ping Pong",
+                "Bowling",
+                "Track",
+                "Golf"
             ],
             "connections": []
         },
         {
-            "name": "'Tony Stark'",
-            "username": "'tsark'",
-            "password": "bd590024e4e40b529e821426a8416c6ced92f4de883ab80a7bb7084cceb7d30b",
+            "name": "Tony Stark",
+            "username": "tsark",
+            "password": "b3a8e0e1f9ab1bfe3a36f231f676f78bb30a519d2b21e6c530c0eee8ebb4a5d0",
             "UID": 2,
-            "email": "'tstark@clemson.edu'",
+            "email": "tstark@clemson.edu",
             "classes": [
-                "'CPSC 1010'",
+                "CPSC 1010",
                 "-nan",
                 "-nan",
                 "-nan",
                 "-nan"
             ],
             "hobbies": [
-                "'Virtual Reality'",
-                "'Music/Music Production'",
-                "'Track'",
-                "'Videogames'",
-                "'Coding'"
+                "Virtual Reality",
+                "Music/Music Production",
+                "Track",
+                "Videogames",
+                "Coding"
             ],
             "connections": []
         },
         {
-            "name": "'Thanos Purp'",
-            "username": "'tpurp'",
-            "password": "b58ddcc5762a9d00ecf7ecc74c2cb14e704faa000ac5efff237f9e7b8fab901b",
+            "name": "Thanos Purp",
+            "username": "tpurp",
+            "password": "35a9e381b1a27567549b5f8a6f783c167ebf809f1c4d6a9e367240484d8ce281",
             "UID": 2,
-            "email": "'tpurp@clemson.edu'",
+            "email": "tpurp@clemson.edu",
             "classes": [
-                "'CPSC 3600'",
-                "'CPSC 4620'",
-                "'CPSC 3720'",
+                "CPSC 3600",
+                "CPSC 4620",
+                "CPSC 3720",
                 "-nan",
                 "-nan"
             ],
             "hobbies": [
-                "'Esports'",
-                "'Ping Pong'",
-                "'Bowling'",
-                "'Golf'",
-                "-nan"
-            ],
-            "connections": []
-        },
-        {
-            "name": "'Natasha Widow'",
-            "username": "'bwidow'",
-            "password": "475a23a7c422dfcecffff09f74c0d0dcbb449d5b31574703ca765d8b5c6a7748",
-            "UID": 2,
-            "email": "'bwidow@clemson.edu'",
-            "classes": [
-                "'CPSC 1020'",
-                "'CPSC 2070'",
-                "-nan",
-                "-nan",
-                "-nan"
-            ],
-            "hobbies": [
-                "'Esports'",
-                "'Baseball'",
-                "'Soccer'",
-                "'Rowing'",
+                "Esports",
+                "Ping Pong",
+                "Bowling",
+                "Golf",
                 "-nan"
             ],
             "connections": []
         },
         {
-            "name": "'Hawk Eye'",
-            "username": "'hwkeye'",
-            "password": "72cbe549294ad0bc30f048ffc97766dc91708790cd6be372ea000c4e35b0e0ab",
+            "name": "Natasha Widow",
+            "username": "bwidow",
+            "password": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
             "UID": 2,
-            "email": "'hwkeye@clemson.edu'",
+            "email": "bwidow@clemson.edu",
             "classes": [
-                "'CPSC 2120'",
-                "'CPSC 2150'",
+                "CPSC 1020",
+                "CPSC 2070",
                 "-nan",
                 "-nan",
                 "-nan"
             ],
             "hobbies": [
-                "'Fencing'",
-                "'Photography'",
-                "'Field Hockey'",
-                "'Frisbee'",
+                "Esports",
+                "Baseball",
+                "Soccer",
+                "Rowing",
                 "-nan"
             ],
             "connections": []
         },
         {
-            "name": "'Peter Parker'",
-            "username": "'pparker'",
-            "password": "f40d5c874905391b9d30f767c712aab280662dad83a717e3cdc53c58c7963859",
+            "name": "Hawk Eye",
+            "username": "hwkeye",
+            "password": "353767b239099863e13ca954e20a66c9d75f777baf239f56e399958de49bf79d",
             "UID": 2,
-            "email": "'pparker@clemson.edu'",
+            "email": "hwkeye@clemson.edu",
             "classes": [
-                "'CPSC 3600'",
-                "'CPSC 4620'",
-                "'CPSC 3720'",
-                "'CPSC 2810'",
-                "'CPSC 2310'"
-            ],
-            "hobbies": [
-                "'Esports'",
-                "'Photography'",
-                "'Bowling'",
-                "'Track'",
-                "'Golf'"
-            ],
-            "connections": []
-        },
-        {
-            "name": "'Peter Quill'",
-            "username": "'pquill'",
-            "password": "be6cf98056c2534f68328ea71110dce1de8a04867261411b4b40d79cb953144b",
-            "UID": 2,
-            "email": "'pquill@clemson.edu'",
-            "classes": [
-                "'CPSC 1070'",
-                "'CPSC 2310'",
+                "CPSC 2120",
+                "CPSC 2150",
                 "-nan",
                 "-nan",
                 "-nan"
             ],
             "hobbies": [
-                "'Skateboarding'",
-                "'Board Games'",
-                "'Playing music'",
-                "-nan",
+                "Fencing",
+                "Photography",
+                "Field Hockey",
+                "Frisbee",
                 "-nan"
             ],
             "connections": []
         },
         {
-            "name": "'Matt Murdock'",
-            "username": "'mmdock'",
-            "password": "e2f63a35d4a7a303f48cf275a495ac87d008f9a9680231de28d6240f615363ba",
+            "name": "Peter Parker",
+            "username": "pparker",
+            "password": "6edf4aafcf3dc1a4a45b34a6120d4529e279007f46f0f0c25710c2a583cfefbf",
             "UID": 2,
-            "email": "'mmdock@clemson.edu'",
+            "email": "pparker@clemson.edu",
             "classes": [
-                "'CPSC 4240'",
-                "'CPSC 4910'",
-                "'CPSC 4820'",
-                "'CPSC 2920'",
-                "-nan"
+                "CPSC 3600",
+                "CPSC 4620",
+                "CPSC 3720",
+                "CPSC 2810",
+                "CPSC 2310"
             ],
             "hobbies": [
-                "'Skateboarding'",
-                "'Hockey'",
-                "'Martial Arts'",
-                "'Bowling'",
-                "'Cheerleading'"
+                "Esports",
+                "Photography",
+                "Bowling",
+                "Track",
+                "Golf"
             ],
             "connections": []
         },
         {
-            "name": "'Wade Wilson'",
-            "username": "'dpool'",
-            "password": "ed03119e33de068e994fc21e02b41d0fc394ea41cab4093f61a7e3cfa9fbca0c",
+            "name": "Peter Quill",
+            "username": "pquill",
+            "password": "e8dedb66d09f7dc99e0b23aaa87f267823e17bdf3cc2ad30533e3a38340e0f8b",
             "UID": 2,
-            "email": "'dpool@clemson.edu'",
+            "email": "pquill@clemson.edu",
             "classes": [
-                "'CPSC 3220'",
-                "'CPSC 3720'",
-                "'CPSC 4620'",
+                "CPSC 1070",
+                "CPSC 2310",
+                "-nan",
                 "-nan",
                 "-nan"
             ],
             "hobbies": [
-                "'Virtual Reality'",
-                "'Videogames'",
-                "'Coding'",
+                "Skateboarding",
+                "Board Games",
+                "Playing music",
                 "-nan",
                 "-nan"
             ],
             "connections": []
         },
         {
-            "name": "'Dor Mammu'",
-            "username": "'dmammu'",
-            "password": "99eb47658ad63601364209fd8ca10ac29316f316164933d1dc519cd288cbdadf",
+            "name": "Matt Murdock",
+            "username": "mmdock",
+            "password": "2b3baf9bf9df0480f227727066d28e96cce3a1d04dbd0a415044791bf4520712",
             "UID": 2,
-            "email": "'dmammu@clemson.edu'",
+            "email": "mmdock@clemson.edu",
             "classes": [
-                "'CPSC 2070'",
-                "'CPSC 1070'",
-                "'CPSC 2310'",
+                "CPSC 4240",
+                "CPSC 4910",
+                "CPSC 4820",
+                "CPSC 2920",
+                "-nan"
+            ],
+            "hobbies": [
+                "Skateboarding",
+                "Hockey",
+                "Martial Arts",
+                "Bowling",
+                "Cheerleading"
+            ],
+            "connections": []
+        },
+        {
+            "name": "Wade Wilson",
+            "username": "dpool",
+            "password": "0a2341af5a30bd9e08055274f6947452ed6169115e99018a577cdab01652f576",
+            "UID": 2,
+            "email": "dpool@clemson.edu",
+            "classes": [
+                "CPSC 3220",
+                "CPSC 3720",
+                "CPSC 4620",
                 "-nan",
                 "-nan"
             ],
             "hobbies": [
-                "'Esports'",
-                "'Cross-Country'",
-                "'Archery'",
-                "'Photography'",
+                "Virtual Reality",
+                "Videogames",
+                "Coding",
+                "-nan",
                 "-nan"
             ],
             "connections": []
