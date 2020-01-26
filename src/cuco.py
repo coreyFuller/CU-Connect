@@ -117,11 +117,9 @@ def matchStudents(students):
     return matched
 
 def main():
-    student1 = Student(1, "Tony Stark", ["Coding", "Virtual Reality"], ["CPSC 1010", "CPSC 1020"])
-    student2 = Student(2, "Steve Rogers", ["Coding", "Virtual Reality"], ["CPSC 1060", "CPSC 2120"])
-    x = calcDistances(student1, student2)
-    print(x)
-    print("testing yo")
+    # student1 = Student(1, "Tony Stark", ["Coding", "Virtual Reality"], ["CPSC 1010", "CPSC 1020"])
+    # student2 = Student(2, "Steve Rogers", ["Coding", "Virtual Reality"], ["CPSC 1060", "CPSC 2120"])
+    # x = calcDistances(student1, student2)
     
     # with open('db.json') as json_file:
     #     data = json.load(json_file)
