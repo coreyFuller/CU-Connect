@@ -9,9 +9,6 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.lang import Builder
 from kivy.uix.popup import Popup
 
-
-
-
 class LoginWindow(Screen):
     email = ObjectProperty(None)
     password = ObjectProperty(None)
@@ -23,8 +20,6 @@ class LoginWindow(Screen):
     def loginBtn(self):
         self.reset()
         sm.current="main"
-
-    
 
     def reset(self):
         self.email.text = ""
@@ -47,7 +42,6 @@ class CreateAccountWindow(Screen):
         self.email.text = ""
         self.password.text = ""
         self.namee.text = ""
-
 
 class MainWindow(Screen):
     n = ObjectProperty(None)
