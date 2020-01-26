@@ -771,28 +771,6 @@
             "connections": []
         },
         {
-            "name": "James Rhodes",
-            "username": "jrhodes",
-            "password": "c36f246b8ee2a786df754849725a14462c49963b0ed582bf4b08ec086234c805",
-            "UID": 2,
-            "email": "jrhodes@clemson.edu",
-            "classes": [
-                "CPSC 4200",
-                "CPSC 3220",
-                "-nan",
-                "-nan",
-                "-nan"
-            ],
-            "hobbies": [
-                "Cooking",
-                "Martial Arts",
-                "Board Games",
-                "Coding",
-                "-nan"
-            ],
-            "connections": []
-        },
-        {
             "name": "Scott Lang",
             "username": "slang",
             "password": "ed256568ab28e896f3b067ff1407117f2e9735c37bb93d864444d57049ef2201",
@@ -809,6 +787,28 @@
                 "Ping Pong",
                 "Board Games",
                 "Virtual Reality",
+                "Coding",
+                "-nan"
+            ],
+            "connections": []
+        },
+        {
+            "name": "James Rhodes",
+            "username": "jrhodes",
+            "password": "c36f246b8ee2a786df754849725a14462c49963b0ed582bf4b08ec086234c805",
+            "UID": 2,
+            "email": "jrhodes@clemson.edu",
+            "classes": [
+                "CPSC 4200",
+                "CPSC 3220",
+                "-nan",
+                "-nan",
+                "-nan"
+            ],
+            "hobbies": [
+                "Cooking",
+                "Martial Arts",
+                "Board Games",
                 "Coding",
                 "-nan"
             ],
