@@ -764,87 +764,83 @@
 <ConnectScreen>:
     name: "connect"
 
-    ScrollView:
-        do_scroll_x: False
-        do_scroll_y: True
+    FloatLayout:
+        size_hint_y: None
+        Label:
+            id: title
+            pos_hint:{"x": 0, "top":.1}
+            size_hint:0.8, 0.3
+            text: "You Could Connect with..."
 
-        FloatLayout:
-            size_hint_y: None
-            Label:
-                id: title
-                pos_hint:{"x": 0, "top":.1}
-                size_hint:0.8, 0.3
-                text: "You Could Connect with..."
+        Label:
+            id: one
+            pos_hint:{"x": 0, "top":.3}
+            size_hint:0.5, 0.2
+            text: "Name:\nClasses you share:\nHobbies:"
 
-            Label:
-                id: one
-                pos_hint:{"x": 0, "top":.3}
-                size_hint:0.5, 0.2
-                text: "Name:\nClasses you share:\nHobbies:"
-
-            Button:
-                id: oneb
-                pos_hint:{"x":.5, "top":.25}
-                size_hint:0.15, 0.075
-                text: "Connect?"
-                on_release:
-                    root.connect();
+        Button:
+            id: oneb
+            pos_hint:{"x":.5, "top":.25}
+            size_hint:0.15, 0.075
+            text: "Connect?"
+            on_release:
+                root.connect();
             
-            Label:
-                id: two
-                pos_hint:{"x": 0, "top":.6}
-                size_hint:0.5, 0.2
-                text: "Name:\nClasses you share:\nHobbies:"
+        Label:
+            id: two
+            pos_hint:{"x": 0, "top":.6}
+            size_hint:0.5, 0.2
+            text: "Name:\nClasses you share:\nHobbies:"
             
-            Button:
-                id: twob
-                pos_hint:{"x":.5, "top":.55}
-                size_hint:0.15, 0.075
-                text: "Connect?"
-                on_release:
-                    root.connect();
+        Button:
+            id: twob
+            pos_hint:{"x":.5, "top":.55}
+            size_hint:0.15, 0.075
+            text: "Connect?"
+            on_release:
+                root.connect();
 
-            Label:
-                id: three
-                pos_hint:{"x": 0, "top":.9}
-                size_hint:0.5, 0.2
-                text: "Name:\nClasses you share:\nHobbies:"
+        Label:
+            id: three
+            pos_hint:{"x": 0, "top":.9}
+            size_hint:0.5, 0.2
+            text: "Name:\nClasses you share:\nHobbies:"
             
-            Button:
-                id: threeb
-                pos_hint:{"x":.5, "top":.85}
-                size_hint:0.15, 0.075
-                text: "Connect?"
-                on_release:
-                    root.connect();
+        Button:
+            id: threeb
+            pos_hint:{"x":.5, "top":.85}
+            size_hint:0.15, 0.075
+            text: "Connect?"
+            on_release:
+                root.connect();
 
-            Label:
-                id: four
-                pos_hint:{"x": 0, "top":1.2}
-                size_hint:0.5, 0.2
-                text: "Name:\nClasses you share:\nHobbies:"
+        Label:
+            id: four
+            pos_hint:{"x": 0, "top":1.2}
+            size_hint:0.5, 0.2
+            text: "Name:\nClasses you share:\nHobbies:"
 
-            Button:
-                id: fourb
-                pos_hint:{"x":.5, "top":1.15}
-                size_hint:0.15, 0.075
-                text: "Connect?"
-                on_release:
-                    root.connect();
+        Button:
+            id: fourb
+            pos_hint:{"x":.5, "top":1.15}
+            size_hint:0.15, 0.075
+            text: "Connect?"
+            on_release:
+                root.connect();
 
-            Label:
-                id: five
-                pos_hint:{"x": 0, "top":1.5}
-                size_hint:0.2, 0.1
-                text: "Name:\nClasses you share:\nHobbies:"
+        Label:
+            id: five
+            pos_hint:{"x": 0, "top":1.5}
+            size_hint:0.2, 0.1
+            text: "Name:\nClasses you share:\nHobbies:"
 
-            Button:
-                id: fiveb
-                pos_hint:{"x":.5, "top":1.45}
-                size_hint:0.15, 0.075
-                text: "Connect?"
-                on_release:
-                    root.connect();
+        Button:
+            id: fiveb
+            pos_hint:{"x":.5, "top":1.45}
+            size_hint:0.15, 0.075
+            text: "Connect?"
+            on_release:
+                root.connect();
             
 
 
