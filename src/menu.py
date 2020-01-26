@@ -15,6 +15,7 @@ from kivy.uix.scrollview import ScrollView
 import subprocess
 
 
+
 class HobbyChooser(Screen):
     hobbies = ObjectProperty(None)
 
@@ -80,16 +81,17 @@ class LoginWindow(Screen):
         sm.current = "create"
 
     def loginBtn(self):
-        if useraccept() is True:
+        if self.useraccept() is True:
             self.reset()
             sm.current="main"
         else: 
-            return Popup(title='NO ACCESS', 
+            pop = Popup(title='NO ACCESS', 
                     content=Label(text="Incorrect Username/Password"), 
                     size_hint=(None,None), size=(400,300))
+            return pop.open()
 
-    def useraccept():
-        return False
+    def useraccept(self):
+        return True
 
     def reset(self):
         self.username.text = ""
