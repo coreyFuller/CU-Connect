@@ -121,10 +121,10 @@ def main():
     # student2 = Student(2, "Steve Rogers", ["Coding", "Virtual Reality"], ["CPSC 1060", "CPSC 2120"])
     # x = calcDistances(student1, student2)
     
-    # with open('db.json') as json_file:
-    #     data = json.load(json_file)
-    #     for s in data['students']:
-    #         studentList.append(Student(s['ID'], s['name'], s['email'], s['hobbies'], s['classes']))
+    with open('dummy.json') as json_file:
+        data = json.load(json_file)
+        for s in data['students']:
+            studentList.append(Student(s['ID'], s['name'], s['email'], s['hobbies'], s['classes']))
     
     matchStudent = studentList.pop()
     
