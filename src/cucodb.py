@@ -5,6 +5,7 @@ import argparse
 import os
 import hashlib
 
+# using the sha256 hash method, hashes passwords
 def hash_password(password):
     return hashlib.sha256(password.encode()).hexdigest()
 
@@ -51,7 +52,7 @@ get_args.add_argument(
 #parse the arguments
 args = get_args.parse_args()
 
-
+# makes all class & hobby lists 5 no matter what is passed in
 if len(args.classes) != 5:
     args.classes.extend(["-nan" for i in range (5 - len(args.classes))])
 if len(args.hobbies) != 5:
@@ -59,12 +60,16 @@ if len(args.hobbies) != 5:
 
 
 json_data = {}
+# Checks if the file is empty or not
+# if so, then it makes an empty dictionary instead of trying to open an empty file
 if os.stat("db.json").st_size != 0:
     with open("db.json", "r") as json_file:
         json_data = json.load(json_file)
 else:
     json_data['students'] = []
+# TODO: fix how this is calculated - rn is only 2 all the time
 UID = len(json_data) + 1
+# formatting the json data
 json_data['students'].append({
     'name'       : args.name,
     'username'   : args.user,
@@ -76,6 +81,6 @@ json_data['students'].append({
     'connections': []
 })
 
-
+# pretty prints the json data to the db file
 with open('db.json', 'w') as json_file:
     json.dump(json_data, json_file, indent=4)
