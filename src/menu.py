@@ -12,9 +12,9 @@ from kivy.base import runTouchApp
 from kivy.uix.dropdown import DropDown
 
 class FillUserInfo(Screen):
-    # major = ObjectProperty(None)
-    # course = ObjectProperty(None)
-    # hobbies = ObjectProperty(None)
+    major = ObjectProperty(None)
+    course = ObjectProperty(None)
+    hobbies = ObjectProperty(None)
     
     # def courseBtn(self):
     #     print("Class Press")

@@ -1,6 +1,8 @@
 <FillUserInfo>:
     name: "userinfo"
 
+    course: course
+
     FloatLayout:
 
         Label:
@@ -9,12 +11,51 @@
             pos_hint: {"x":0.1, "top":0.7}
             size_hint: 0.35, 0.15
 
+        Label:
+            text:"Courses? "
+            font_size: (root.width**2 + root.height**2) / 13**4
+            pos_hint: {"x":0.1, "top":0.5}
+            size_hint: 0.35, 0.15
+
         TextInput:
             id: major
             font_size: (root.width**2 + root.height**2) / 13**4
             multiline: True
             pos_hint: {"x": 0.45 , "top":0.67}
             size_hint: 0.4, 0.09
+        
+    Button:
+        id: launch
+        text: '-'
+        on_release: course.open(self)
+        size_hint_y: None
+        height: '48dp'
+        pos_hint: {"x": .45, "top": 0.47}
+        size_hint: 0.4, 0.09
+
+    DropDown:
+
+        id: course
+        on_select: launch.text = 'Selected value: {}'.format(args[1])
+
+        Button:
+            text: 'Value A'
+            size_hint_y: None
+            height: '48dp'
+            on_release: course.select('A')
+
+        Button:
+            text: 'Value B'
+            size_hint_y: None
+            height: '48dp'
+            on_release: course.select('B')
+
+        Button:
+            text: 'Value C'
+            size_hint_y: None
+            height: '48dp'
+            on_release: course.select('C')
+        
 
 <LoginWindow>:
     name: "login"
