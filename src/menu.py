@@ -11,6 +11,8 @@ from kivy.uix.popup import Popup
 from kivy.base import runTouchApp
 from kivy.uix.dropdown import DropDown
 from kivy.uix.checkbox import CheckBox 
+from kivy.uix.scrollview import ScrollView
+
 
 class HobbyChooser(Screen):
     hobbies = ObjectProperty(None)
@@ -70,7 +72,9 @@ class FillUserInfo(Screen):
     
     # def hobbiesBtn(self):
     #      print("Hobbies Press")
-    
+
+class ConnectScreen(Screen):
+    print("Hey")
 
 class LoginWindow(Screen):
     username = ObjectProperty(None)
@@ -136,7 +140,8 @@ screens = [LoginWindow(name="login"),
             CreateAccountWindow(name="create"), 
             MainWindow(name="main"), 
             FillUserInfo(name="userinfo"),
-            HobbyChooser(name="hobbies")]
+            HobbyChooser(name="hobbies"),
+            ConnectScreen(name="connect")]
 for screen in screens:
     sm.add_widget(screen)
 
