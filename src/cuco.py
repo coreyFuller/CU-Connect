@@ -126,13 +126,13 @@ def main():
     #     for s in data['students']:
     #         studentList.append(Student(s['ID'], s['name'], s['email'], s['hobbies'], s['classes']))
     
-    
+    matchStudent = studentList.pop()
     
     #for all students in list
     # find the total distace for all 10 dimensions from user to each student
     # store average of distances total in student object
     for x in studentList:
-        x.totalDistance += calcDistances(, x);
+        x.totalDistance += calcDistances(matchStudent, x);
         x.matchAverage = totalDistance/10
     
     #sort based on average
