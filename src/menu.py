@@ -137,8 +137,8 @@ class MainWindow(Screen):
         print(input)
         subprocess.call(['python', 'cucodb.py', '--user', input[0], '--pw', 'hello', '--name', input[1], 
                 '--email',input[1],
-                '--classes', input[3], 
-                '--hobbies', input[4]
+                '--classes', [ str(x) for x in input[3] ], 
+                '--hobbies', [ str(x) for x in input[4] ]
                 ])
         self.n.text = "Account Name: " + input[0]
         self.email.text = "Email: " + input[1]
