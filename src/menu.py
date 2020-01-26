@@ -10,7 +10,7 @@ from kivy.lang import Builder
 from kivy.uix.popup import Popup
 
 class LoginWindow(Screen):
-    email = ObjectProperty(None)
+    username = ObjectProperty(None)
     password = ObjectProperty(None)
 
     def createBtn(self):
@@ -18,11 +18,12 @@ class LoginWindow(Screen):
         sm.current = "create"
 
     def loginBtn(self):
+        print(self.username.text)
         self.reset()
         sm.current="main"
 
     def reset(self):
-        self.email.text = ""
+        self.username.text = ""
         self.password.text = ""
 
 class CreateAccountWindow(Screen):

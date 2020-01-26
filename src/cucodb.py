@@ -71,11 +71,12 @@ if os.stat("db.json").st_size != 0:
         json_data = json.load(json_file)
 else:
     json_data['students'] = []
-#UID = len(json_data) + 1
+UID = len(json_data) + 1
 json_data['students'].append({
     'name'       : args.name,
     'username'   : args.user,
     'password'   : hash_password(args.pw),
+    'UID'        : UID,
     'email'      : args.email,
     'classes'    : args.classes,
     'hobbies'    : args.hobbies,

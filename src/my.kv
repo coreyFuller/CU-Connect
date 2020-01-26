@@ -1,41 +1,45 @@
 <LoginWindow>:
     name: "login"
 
-    email: email
+    username: username
     password: password
 
     FloatLayout:
 
         Label:
-            text:"Email: "
-            font_size: (root.width**2 + root.height**2) / 13**4
-            pos_hint: {"x":0.1, "top":0.9}
-            size_hint: 0.35, 0.15
-
-        TextInput:
-            id: email
-            font_size: (root.width**2 + root.height**2) / 13**4
-            multiline: False
-            pos_hint: {"x": 0.45 , "top":0.9}
-            size_hint: 0.4, 0.15
+            text: "CU Connect"
+            font_size: (root.width**2 + root.height**2) / 12**4
+            pos_hint: {"x":0, "top":1.35}
 
         Label:
-            text:"Password: "
+            text:"Username: "
             font_size: (root.width**2 + root.height**2) / 13**4
             pos_hint: {"x":0.1, "top":0.7}
             size_hint: 0.35, 0.15
 
         TextInput:
+            id: username
+            font_size: (root.width**2 + root.height**2) / 13**4
+            multiline: True
+            pos_hint: {"x": 0.45 , "top":0.67}
+            size_hint: 0.4, 0.09
+        Label:
+            text:"Password: "
+            font_size: (root.width**2 + root.height**2) / 13**4
+            pos_hint: {"x":0.1, "top":0.5}
+            size_hint: 0.35, 0.15
+
+        TextInput:
             id: password
             font_size: (root.width**2 + root.height**2) / 13**4
-            multiline: False
+            multiline: True
             password: True
-            pos_hint: {"x": 0.45, "top":0.7}
-            size_hint: 0.4, 0.15
+            pos_hint: {"x": 0.45, "top":0.475}
+            size_hint: 0.4, 0.09
 
         Button:
-            pos_hint:{"x":0.2,"y":0.05}
-            size_hint: 0.6, 0.2
+            pos_hint:{"x":0.35,"y":0.2}
+            size_hint: 0.3, 0.1
             font_size: (root.width**2 + root.height**2) / 13**4
             text: "Login"
             on_release:
@@ -43,10 +47,10 @@
                 root.loginBtn()
 
         Button:
-            pos_hint:{"x":0.3,"y":0.3}
+            pos_hint:{"x":0.3,"y":0.05}
             size_hint: 0.4, 0.1
-            font_size: (root.width**2 + root.height**2) / 17**4
-            text: "Don't have an Account? Create One"
+            font_size: (root.width**2 + root.height**2) / 13**4
+            text: "Create Account"
             on_release:
                 root.manager.transition.direction = "right"
                 root.createBtn()
