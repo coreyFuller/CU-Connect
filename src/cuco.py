@@ -2,16 +2,16 @@ import json #needed to read in JSON File
 
 
 class Student:
-    ID
+    ID = 0
     Hobbies = []
     Classes = []
-    Name
-    totalDistance
-    matchAverage 
+    Name = []
+    totalDistance = 0
+    matchAverage = 0
 
     # default constructor 
-    def __init__(self, id, name, hobbies, classes): 
-        self.ID = id
+    def __init__(self, idval, name, hobbies, classes): 
+        self.ID = idval
         self.Name = name
         self.Hobbies = hobbies
         self.Classes = classes
@@ -131,6 +131,7 @@ def main():
     student2 = (2, ["Coding", "Virtual Reality"], ["CPSC 1060", "CPSC 2120"], ["Annie", "Hill"], 1003, 1004)
     x = calcDistances(student1, student2)
     print(x)
+    print("testing yo")
     
     with open('db.json') as json_file:
         data = json.load(json_file)
@@ -138,6 +139,6 @@ def main():
             studentList.append(Student(s['ID'], s['name'], s['hobbies'], s['classes']))
 
     
-if __name__ == 'main':
-    main()
+# if __name__ == 'main':
+main()
         
