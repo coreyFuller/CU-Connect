@@ -12,6 +12,8 @@ from kivy.base import runTouchApp
 from kivy.uix.dropdown import DropDown
 from kivy.uix.checkbox import CheckBox 
 from kivy.uix.scrollview import ScrollView
+import subprocess
+
 
 
 class HobbyChooser(Screen):
@@ -30,8 +32,9 @@ class HobbyChooser(Screen):
             return subbutt()
         else:
             # self.reset()
+            input.append(self.hobbylist)
             sm.current = "main"
-            print(self.hobbylist)
+            
 
 
     def reset(self):
@@ -53,25 +56,18 @@ class FillUserInfo(Screen):
             #print("Checkbox unchecked "+ checkboxInstance)
             self.courselist.remove(checkboxInstance)
         print(self.courselist)
+        
 
     def hobbies(self):
         if len(self.courselist) > 5 or len(self.courselist) < 1:
             return subbutt()
         else:
             # self.reset()
+            input.append(self.courselist)
             sm.current = "hobbies"
 
     def reset(self):
         self.major.text = ""
-
-
-            
-
-    # def courseBtn(self):
-    #     print("Class Press")
-    
-    # def hobbiesBtn(self):
-    #      print("Hobbies Press")
 
 class ConnectScreen(Screen):
     print("Hey")
@@ -85,9 +81,17 @@ class LoginWindow(Screen):
         sm.current = "create"
 
     def loginBtn(self):
-        print(self.username.text)
-        self.reset()
-        sm.current="main"
+        if self.useraccept() is True:
+            self.reset()
+            sm.current="main"
+        else: 
+            pop = Popup(title='NO ACCESS', 
+                    content=Label(text="Incorrect Username/Password"), 
+                    size_hint=(None,None), size=(400,300))
+            return pop.open()
+
+    def useraccept(self):
+        return True
 
     def reset(self):
         self.username.text = ""
@@ -103,6 +107,14 @@ class CreateAccountWindow(Screen):
         sm.current = "login"
 
     def submit(self):
+        if self.namee.text is "" or self.email.text is "" or self.password.text is "":
+            pop = Popup(title='Blank Slots', 
+                    content=Label(text="You have left spaces blank"), 
+                    size_hint=(None,None), size=(400,300))
+            return pop.open()
+        input.append(self.namee.text)
+        input.append(self.email.text)
+        input.append(self.password)
         self.reset()
         sm.current = "userinfo"
 
@@ -121,9 +133,16 @@ class MainWindow(Screen):
         sm:current = "login"
 
     def on_enter(self, *args):
+        print(input)
+        subprocess.call(['python', 'cucodb.py', '--user', input[0], '--pw', 'hello', '--name', input[1], 
+                '--email',input[1],
+                '--classes', input[3], 
+                '--hobbies', input[4]
+                ])
         self.n.text = "Account Name: Jamie"
         self.email.text = "Email: Ketchup@gmail.com"
         self.created.text = "Created On: Now"
+
 
 def subbutt():
     pop = Popup(title='Too many chosen', 
@@ -132,6 +151,8 @@ def subbutt():
 
 class WindowManager(ScreenManager):
     pass
+
+input = []
 
 kv = Builder.load_file("my.kv")
 sm = WindowManager()
