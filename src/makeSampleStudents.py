@@ -3,6 +3,11 @@ import subprocess
 import time
 # --user 'als' --pw '123' --name 'Ashton S' --classes 'CPSC 3600' 'CPSC 4620' --hobbies 'weightlifting' 'Basketball'
 
+subprocess.call(['rm', 'db.json'])
+subprocess.call(['echo', 'rm db.json'])
+subprocess.call(['touch', 'db.json'])
+subprocess.call(['echo', 'touch db.json'])
+
 subprocess.call(['./cucodb.py', '--user', 'asobeck', '--pw', '123', '--name', 'Ashton Sobeck', 
                 '--email','asobeck@clemson.edu',
                 '--classes', 'CPSC 3600', 'CPSC 4620', 'CPSC 3720', 'CPSC 2810', 'CPSC 2310',
@@ -211,7 +216,7 @@ subprocess.call(['./cucodb.py', '--user', 'vondoom', '--pw', '09834', '--name', 
 time.sleep(2)
 subprocess.call(['./cucodb.py', '--user', 'ssurfer', '--pw', '19285', '--name', 'Silver Surfer', 
                 '--email','ssurfer@clemson.edu',
-                '--classes', 'CPSC 3600', 'CPSC 4200', 'CPSC 4190',
+                '--classes', 'CPSC 3600', 'CPSC 4200', 'CPSC 4910',
                 '--hobbies', 'Skateboarding', 'Ping Pong', 'Hockey', 'Chess', 'Board Games'
                 ])
 time.sleep(2)
