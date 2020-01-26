@@ -127,8 +127,8 @@ def matchStudents(students):
 
 
 def main():
-    student1 = Student(1, ["Coding", "Virtual Reality"], ["CPSC 1010", "CPSC 1020"], ["Bob", "Smith"], 1000, 1002)
-    student2 = Student(2, ["Coding", "Virtual Reality"], ["CPSC 1060", "CPSC 2120"], ["Annie", "Hill"], 1003, 1004)
+    student1 = Student(1, ["Coding", "Virtual Reality"], ["CPSC 1010", "CPSC 1020"], ["Bob", "Smith"])
+    student2 = Student(2, ["Coding", "Virtual Reality"], ["CPSC 1060", "CPSC 2120"], ["Annie", "Hill"])
     x = calcDistances(student1, student2)
     print(x)
     print("testing yo")
