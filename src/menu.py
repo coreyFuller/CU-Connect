@@ -25,7 +25,6 @@ class LoginWindow(Screen):
         self.email.text = ""
         self.password.text = ""
 
-
 class CreateAccountWindow(Screen):
     namee = ObjectProperty(None)
     email = ObjectProperty(None)
@@ -77,7 +76,6 @@ sm.current = "login"
 class MyApp(App):
     def build(self):
         return sm
-
 
 if __name__ == "__main__":
     MyApp().run()
