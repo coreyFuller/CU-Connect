@@ -31,58 +31,61 @@ classDict = {
     "CPSC 1060" : 20,
     "CPSC 1020" : 50,
     "CPSC 1070" : 70,
-    "CPSC 2070" : 100,
-    "CPSC 2120" : 125,
-    "CPSC 2150" : 135,
-    "CPSC 2310" : 160,
-    "CPSC 3220" : 210,
-    "CPSC 3720" : 220,
-    "CPSC 3600" : 235,
-    "CPSC 3710" : 240,
-    "CPSC 4200" : 300,
-    "CPSC 4240" : 310,
-    "CPSC 4620" : 335,
-    "CPSC 4910" : 350,
+    "CPSC 2070" : 200,
+    "CPSC 2120" : 230,
+    "CPSC 2920" : 210,
+    "CPSC 2150" : 250,
+    "CPSC 2310" : 270,
+    "CPSC 2810" : 290,
+    "CPSC 3220" : 300,
+    "CPSC 3720" : 330,
+    "CPSC 3600" : 380,
+    "CPSC 3710" : 350,
+    "CPSC 4200" : 420,
+    "CPSC 4240" : 424,
+    "CPSC 4620" : 462,
+    "CPSC 4820" : 482,
+    "CPSC 4910" : 491,
  }
 
 # maps hobbies to a distance
 classHobbies = {
     "-nan" : 0,
     "Coding" : 5,
-    "Virtual Reality" : 7,
-    "Videogames" : 8,
-    "Robotics" : 12,
-    "Movies" :  14,
-    "Music/Music Production" : 16,
-    "Photography" : 25,
+    "Virtual Reality" : 100,
+    "Videogames" : 120,
+    "Robotics" : 15,
+    "Movies" :  500,
+    "Music/Music Production" : 290000,
+    "Photography" : 700,
     "Archery" : 100,
-    "Basketball" : 150,
-    "Baseball" : 200,
-    "Track" : 250,
-    "Cross-Country" : 260,
-    "Volleyball" : 300,
-    "Lacrosse" : 350,
-    "Soccer" : 370,
-    "Softball" : 220,
-    "Swimming" : 1500,
-    "Football" : 600,
-    "Rowing" : 800,
-    "Field Hockey" : 1000,
-    "Bowling" : 1300,
-    "Golf" : 1600,
-    "Frisbee" :  410,
-    "Ping Pong" : 2000,
-    "Cheerleading" : 2200,
-    "Fencing" : 2400,
-    "Esports" : 5,
-    "Skateboarding" : 2800,
-    "Hockey" : 1100,
-    "Chess" : 3000,
-    "Drawing/Art" : 5000,
-    "Cooking" : 4000,
-    "Playing music" : 5500,
-    "Martial arts" : 6000,
-    "Board games" : 3300,
+    "Basketball" : 1500,
+    "Baseball" : 2000,
+    "Track" : 3000,
+    "Cross-Country" : 3300,
+    "Volleyball" : 4000,
+    "Lacrosse" : 5000,
+    "Soccer" : 6000,
+    "Softball" : 2500,
+    "Swimming" : 8000,
+    "Football" : 10000,
+    "Rowing" : 12000,
+    "Field Hockey" : 15000,
+    "Bowling" : 20000,
+    "Golf" :150000 ,
+    "Frisbee" :  26000,
+    "Ping Pong" : 30000,
+    "Cheerleading" : 40000,
+    "Fencing" : 50000,
+    "Esports" : 140,
+    "Skateboarding" : 60000,
+    "Hockey" : 16000,
+    "Chess" : 220000,
+    "Drawing/Art" :  750,
+    "Cooking" : 75000,
+    "Playing Music" : 300000 ,
+    "Martial Arts" : 80000,
+    "Board Games" : 200000,
 }
 
 
@@ -93,51 +96,53 @@ classHobbies = {
 #build objects by putting info in the constructors
 
 def calcDistances(StudentA, StudentB):
-    totalDist = 0
-    # for x in range(5):
-        # totalDist += abs(classHobbies[StudentA.Hobbies[x]] - classHobbies[StudentB.Hobbies[x]])
-    aStudClassVal = 0
-    bStudClassVal = 0
+    hobbyDist = 0
+    classDist = 0
+    for x in range(5):
+        hobbyDist += abs(classHobbies[StudentA.Hobbies[x]] - classHobbies[StudentB.Hobbies[x]])
+    hobbieMean = hobbyDist / 5
 #Calculating mean value of Student A's classes
-    for x in StudentA.Classes:
-        aStudClassVal += classDict[x]
+    # for x in StudentA.Classes:
+    #     aStudClassVal += classDict[x]
+    # classMean = aStudClassVal / 5
     #Calculating mean value of Student B's classes
-    for x in StudentB.Classes:
-        bStudClassVal += classDict[x]
+    for x in range(5):
+        classDist += abs(classDict[StudentA.Classes[x]] - classDict[StudentB.Classes[x]])
+    classMean = classDist / 5
     #Finding difference between mean values of A's classes and B's classes
-    totalDist += (aStudClassVal + bStudClassVal) / 10
+    totalDist = classMean + hobbieMean
     return totalDist
 
 def matchStudents(students):
     #sorts objects based on average
-    students.sort(key = lambda x: x.matchAverage)
+    students.sort(key = lambda x: x.totalDistance)
     #creates list of top 5 matches
     matched = students[:5]
     #returns list
     return matched
 
 def main():
-    # student1 = Student(1, "Tony Stark", ["Coding", "Virtual Reality"], ["CPSC 1010", "CPSC 1020"])
-    # student2 = Student(2, "Steve Rogers", ["Coding", "Virtual Reality"], ["CPSC 1060", "CPSC 2120"])
-    # x = calcDistances(student1, student2)
-    
     with open('db.json') as json_file:
         data = json.load(json_file)
         for s in data['students']:
             studentList.append(Student(s['UID'], s['name'], s['email'], s['hobbies'], s['classes']))
     matchStudent = studentList.pop()
-    matchStudent.display()
     
     #for all students in list
     # find the total distace for all 10 dimensions from user to each student
     # store average of distances total in student object
     for x in studentList:
         x.totalDistance += calcDistances(matchStudent, x);
-        x.matchAverage = totalDistance/10
     
     #sort based on average
     # return 10 student objects   
+    print("Here are " + matchStudent.Name + "'s matches: ")
+    print("\n")
+    matchStudent.display()
+    print("\n")
     matched = matchStudents(studentList)  
+    for x in matched:
+        x.display()
 
     
 if __name__ == '__main__':
