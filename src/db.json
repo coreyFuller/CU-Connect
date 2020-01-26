@@ -23,28 +23,6 @@
             "connections": []
         },
         {
-            "name": "Ashton Sobeck",
-            "username": "asobeck",
-            "password": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-            "UID": 2,
-            "email": "asobeck@clemson.edu",
-            "classes": [
-                "CPSC 3600",
-                "CPSC 4620",
-                "CPSC 3720",
-                "CPSC 2810",
-                "CPSC 2310"
-            ],
-            "hobbies": [
-                "Esports",
-                "Ping Pong",
-                "Bowling",
-                "Track",
-                "Golf"
-            ],
-            "connections": []
-        },
-        {
             "name": "Tony Stark",
             "username": "tsark",
             "password": "b3a8e0e1f9ab1bfe3a36f231f676f78bb30a519d2b21e6c530c0eee8ebb4a5d0",
@@ -228,17 +206,16 @@
             "email": "sstrange@clemson.edu",
             "classes": [
                 "CPSC 1060",
-                "CPSC 2070--hobbies",
+                "CPSC 2070",
+                "-nan",
+                "-nan",
+                "-nan"
+            ],
+            "hobbies": [
                 "Skateboarding",
                 "Esports",
                 "Track",
-                "Golf"
-            ],
-            "hobbies": [
-                "-nan",
-                "-nan",
-                "-nan",
-                "-nan",
+                "Golf",
                 "-nan"
             ],
             "connections": []
