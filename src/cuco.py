@@ -139,11 +139,6 @@ def main():
             studentList.append(Student(s['ID'], s['name'], s['hobbies'], s['classes']))
 
     
-<<<<<<< HEAD
-# if __name__ == 'main':
-main()
-=======
-if __name__ == '__main__':
+if __name__ == 'main':
     main()
->>>>>>> d22839fb528013bb6647a9d13c60f563a53f8178
         
