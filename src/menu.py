@@ -9,38 +9,22 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.lang import Builder
 from kivy.uix.popup import Popup
 
-
-
-
 class LoginWindow(Screen):
-    email = ObjectProperty(None)
+    username = ObjectProperty(None)
     password = ObjectProperty(None)
 
-    def btn(self):
-        print("Name:", self.name.text, "email:", self.email.text)
-        self.email.text = ""
-        self.password.text = ""
-
-<<<<<<< HEAD
     def createBtn(self):
         self.reset()
         sm.current = "create"
-=======
-        # self.add_widget(Label(text='[font=Helvetica]'+'Email'+'[/font]', markup = True))
-        # self.email = TextInput(multiline=False)
-        # self.add_widget(self.email)
->>>>>>> 4bdfa7e16ef2eb62d1ef5d353fbc580883acd146
 
     def loginBtn(self):
+        print(self.username.text)
         self.reset()
         sm.current="main"
 
-    
-
     def reset(self):
-        self.email.text = ""
+        self.username.text = ""
         self.password.text = ""
-
 
 class CreateAccountWindow(Screen):
     namee = ObjectProperty(None)
@@ -58,7 +42,6 @@ class CreateAccountWindow(Screen):
         self.email.text = ""
         self.password.text = ""
         self.namee.text = ""
-
 
 class MainWindow(Screen):
     n = ObjectProperty(None)
@@ -93,13 +76,7 @@ sm.current = "login"
 
 class MyApp(App):
     def build(self):
-<<<<<<< HEAD
         return sm
-=======
-        Window.size = (650,650)
-        return LoginScreen()
->>>>>>> 4bdfa7e16ef2eb62d1ef5d353fbc580883acd146
-
 
 if __name__ == "__main__":
     MyApp().run()

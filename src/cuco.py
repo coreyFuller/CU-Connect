@@ -2,32 +2,31 @@ import json #needed to read in JSON File
 
 
 class Student:
-    ID = 1
+    ID = 0
     Hobbies = []
     Classes = []
     Name = []
-    unhash
-    pwhash
-    totalDistance
-    matchAverage 
+    totalDistance = 0
+    matchAverage = 0
+
+    # default constructor 
+    def __init__(self, idval, name, hobbies, classes): 
+        self.ID = idval
+        self.Name = name
+        self.Hobbies = hobbies
+        self.Classes = classes
+        self.totalDistance = 0
+        self.matchAverage = 0
 
 studentList = []
 
-    # default constructor 
-    def __init__(self, id, hobbies, classes, name, hasval1, hasval2): 
-        self.ID = id
-        self.Hobbies = hobbies
-        self.Classes = classes
-        self.Name = name
-        self.unhash = hasval1
-        self.pwhash = hasval2
-        self.totalDistance = 0
-
 #maps of classes to a distance line 
 classDict = {
-    "-nan" : 0,
+    "CPSC 1010" : 0,
+    "CPSC 1060" : 20,
+    "CPSC 1070" : 0,
     "CPSC 1010" : 5,
-    "CPSC 1060" : 20
+    "CPSC 1060" : 20,
     "CPSC 1020" : 50,
     "CPSC 1070" : 70,
     "CPSC 2070" : 100,
@@ -91,26 +90,24 @@ classHobbies = {
 #read in info from the JSON file and pass it to an array of objects
 #build objects by putting info in the constructors
 
-def calcDistances(StudentA, StudentB) 
+def calcDistances(StudentA, StudentB):
     totalDist = 0
-    for x in range(5):
-        totalDist += abs(classHobbies[StudentA.Hobbies[x]] - classHobbies[StudentB.Hobbies[x]])
+    # for x in range(5):
+        # totalDist += abs(classHobbies[StudentA.Hobbies[x]] - classHobbies[StudentB.Hobbies[x]])
     aStudClassVal = 0
     bStudClassVal = 0
 #Calculating mean value of Student A's classes
     for x in StudentA.Classes:
         aStudClassVal += classDict[x]
-    aStudClassVal /= len(StudentB.Classes)
     #Calculating mean value of Student B's classes
     for x in StudentB.Classes:
         bStudClassVal += classDict[x]
-    bStudClassVal /= len(StudentB.Classes)
     #Finding difference between mean values of A's classes and B's classes
-    totalDist += abs(aStudClassVal - bStudClassVal)
+    totalDist += (aStudClassVal + bStudClassVal) / 10
     return totalDist
 
 def matchStudents(students):
-    students.sort(key = lamba x: x.matchAverage)
+    students.sort(key = lambda x: x.matchAverage)
     matched = students[:5]
     return match
 
@@ -126,5 +123,20 @@ def matchStudents(students):
 #sort based on average
 # return 10 student objects
 
-if __name__ == 'main':
+
+def main():
+    student1 = Student(1, "Tony Stark", ["Coding", "Virtual Reality"], ["CPSC 1010", "CPSC 1020"])
+    student2 = Student(2, "Steve Rogers", ["Coding", "Virtual Reality"], ["CPSC 1060", "CPSC 2120"])
+    x = calcDistances(student1, student2)
+    print(x)
+    print("testing yo")
+    
+    # with open('db.json') as json_file:
+    #     data = json.load(json_file)
+    #     for s in data['students']:
+    #         studentList.append(Student(s['ID'], s['name'], s['hobbies'], s['classes']))
+
+    
+if __name__ == '__main__':
     main()
+        
