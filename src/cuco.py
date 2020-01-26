@@ -83,26 +83,29 @@ classHobbies = {
 #read in info from the JSON file and pass it to an array of objects
 #build objects by putting info in the constructors
 
-for  B in studentList:
-    def calcDistances(StudentA, StudentB) {
-        totalDist = 0
-        for x in range(5):
-            totalDist += abs(classHobbies[StudentA.Hobbies[x]] - classHobbies[StudentB.Hobbies[x]])
-    
-        aStudClassVal = 0
-        bStudClassVal = 0
-    #Calculating mean value of Student A's classes
-        for x in StudentA.Classes:
-            aStudClassVal += classDict[x]
-        aStudClassVal /= len(StudentB.Classes)
-        #Calculating mean value of Student B's classes
-        for x in StudentB.Classes:
-            bStudClassVal += classDict[x]
-        bStudClassVal /= len(StudentB.Classes)
-        #Finding difference between mean values of A's classes and B's classes
-        totalDist += abs(aStudClassVal - bStudClassVal)
-        return totalDist
-}
+def calcDistances(StudentA, StudentB) 
+    totalDist = 0
+    for x in range(5):
+        totalDist += abs(classHobbies[StudentA.Hobbies[x]] - classHobbies[StudentB.Hobbies[x]])
+    aStudClassVal = 0
+    bStudClassVal = 0
+#Calculating mean value of Student A's classes
+    for x in StudentA.Classes:
+        aStudClassVal += classDict[x]
+    aStudClassVal /= len(StudentB.Classes)
+    #Calculating mean value of Student B's classes
+    for x in StudentB.Classes:
+        bStudClassVal += classDict[x]
+    bStudClassVal /= len(StudentB.Classes)
+    #Finding difference between mean values of A's classes and B's classes
+    totalDist += abs(aStudClassVal - bStudClassVal)
+    return totalDist
+
+def matchStudents(students):
+    students.sort(key = lamba x: x.matchAverage)
+    matched = students[:5]
+    return match
+
 #for all students in list
     # find the total distace for all 10 dimensions from user to each student
     # store average of distances total in student object
@@ -114,7 +117,3 @@ for  B in studentList:
 
 #sort based on average
 # return 10 student objects
-def matchStudents(students):
-    students.sort(key = lamba x: x.matchAverage)
-    matched = students[:5]
-    return match
