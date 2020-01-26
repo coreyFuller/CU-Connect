@@ -94,7 +94,7 @@ classHobbies = {
 #read in info from the JSON file and pass it to an array of objects
 #build objects by putting info in the constructors
 
-def calcDistances(StudentA, StudentB) 
+def calcDistances(StudentA, StudentB):
     totalDist = 0
     for x in range(5):
         totalDist += abs(classHobbies[StudentA.Hobbies[x]] - classHobbies[StudentB.Hobbies[x]])
@@ -113,7 +113,7 @@ def calcDistances(StudentA, StudentB)
     return totalDist
 
 def matchStudents(students):
-    students.sort(key = lamba x: x.matchAverage)
+    students.sort(key = lambda x: x.matchAverage)
     matched = students[:5]
     return match
 
