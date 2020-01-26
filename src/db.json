@@ -148,7 +148,7 @@
             "hobbies": [
                 "Skateboarding",
                 "Board Games",
-                "Playing music",
+                "Playing Music",
                 "-nan",
                 "-nan"
             ],
@@ -771,28 +771,6 @@
             "connections": []
         },
         {
-            "name": "Scott Lang",
-            "username": "slang",
-            "password": "ed256568ab28e896f3b067ff1407117f2e9735c37bb93d864444d57049ef2201",
-            "UID": 2,
-            "email": "slang@clemson.edu",
-            "classes": [
-                "CPSC 4200",
-                "CPSC 3220",
-                "CPSC 2810",
-                "-nan",
-                "-nan"
-            ],
-            "hobbies": [
-                "Ping Pong",
-                "Board Games",
-                "Virtual Reality",
-                "Coding",
-                "-nan"
-            ],
-            "connections": []
-        },
-        {
             "name": "James Rhodes",
             "username": "jrhodes",
             "password": "c36f246b8ee2a786df754849725a14462c49963b0ed582bf4b08ec086234c805",
@@ -809,6 +787,28 @@
                 "Cooking",
                 "Martial Arts",
                 "Board Games",
+                "Coding",
+                "-nan"
+            ],
+            "connections": []
+        },
+        {
+            "name": "Scott Lang",
+            "username": "slang",
+            "password": "ed256568ab28e896f3b067ff1407117f2e9735c37bb93d864444d57049ef2201",
+            "UID": 2,
+            "email": "slang@clemson.edu",
+            "classes": [
+                "CPSC 4200",
+                "CPSC 3220",
+                "CPSC 2810",
+                "-nan",
+                "-nan"
+            ],
+            "hobbies": [
+                "Ping Pong",
+                "Board Games",
+                "Virtual Reality",
                 "Coding",
                 "-nan"
             ],

@@ -49,7 +49,7 @@ time.sleep(2)
 subprocess.call(['./cucodb.py', '--user', 'pquill', '--pw', '2298', '--name', 'Peter Quill', 
                 '--email','pquill@clemson.edu',
                 '--classes', 'CPSC 1070', 'CPSC 2310',
-                '--hobbies', 'Skateboarding', 'Board Games', 'Playing music'
+                '--hobbies', 'Skateboarding', 'Board Games', 'Playing Music'
                 ])
 time.sleep(2)
 subprocess.call(['./cucodb.py', '--user', 'mmdock', '--pw', '7783', '--name', 'Matt Murdock', 
