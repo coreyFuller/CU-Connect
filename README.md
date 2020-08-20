@@ -1,8 +1,8 @@
 # CUCO
-Connecting Clemson Computer Science students together!
+
+A program that used to connect Clemson University computer science students taking similar classes and have similar hobbies. Made at CUhackit, Clemson's 24 hour hackathon.
 
 ## To Run
-py menu.py for GUI
 python cuco.py for Alg
 
 
